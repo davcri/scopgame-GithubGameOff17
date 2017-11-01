@@ -1,5 +1,6 @@
 # ScopGame
 
+
 Project is organized by scenes, like suggested on [Godot documentaion](https://godot.readthedocs.io/en/stable/learning/workflow/project_setup/project_organization.html#scene-organization).
 
 
@@ -23,5 +24,5 @@ game/gui/options/options.scn
 ### Useful links
 
 - [Collection of free resources](https://github.com/Calinou/awesome-gamedev#editors)
-
+- [Godot - Keyboard shortcuts](https://youtu.be/rMx35lyXCpk)
 
