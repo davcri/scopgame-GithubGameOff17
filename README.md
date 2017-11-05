@@ -1,8 +1,7 @@
 # ScopGame
 
-
-Project is organized by scenes, like suggested on [Godot documentaion](https://godot.readthedocs.io/en/stable/learning/workflow/project_setup/project_organization.html#scene-organization).
-
+Project is organized by scenes, like suggested on 
+[Godot documentaion](https://godot.readthedocs.io/en/stable/learning/workflow/project_setup/project_organization.html#scene-organization):
 
 ```
 game/engine.cfg
@@ -21,8 +20,12 @@ game/gui/main_screen/main_sceen.scn
 game/gui/options/options.scn
 ```
 
-### Useful links
+### How to contribute
+Read the [CONTRIBUTING.md](./CONTRIBUTING.md) file to find simple guidelines
+on how to contribute to this project using git.
 
-- [Collection of free resources](https://github.com/Calinou/awesome-gamedev#editors)
+
+### Useful links
+- [Collection of free assets and resources](https://github.com/Calinou/awesome-gamedev#editors)
 - [Godot - Keyboard shortcuts](https://youtu.be/rMx35lyXCpk)
 
