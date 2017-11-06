@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=1]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://game/scenes/walk_jump/Player.gd" type="Script" id=1]
+[ext_resource path="res://game/scenes/walk_jump/icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
