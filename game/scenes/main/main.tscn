@@ -1,4 +1,6 @@
-[gd_scene format=1]
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://game/scenes/main/scene_changer.gd" type="Script" id=1]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,16 +11,76 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 180.0
-margin/top = 109.0
-margin/right = 403.0
-margin/bottom = 229.0
-text = "Main Scene"
+margin/left = 175.0
+margin/top = -105.0
+margin/right = 398.0
+margin/bottom = 15.0
+text = "Main Scene: Debug Room"
 align = 1
 valign = 1
 uppercase = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="scenes" type="Label" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 86.0
+margin/top = 118.0
+margin/right = 206.0
+margin/bottom = 183.0
+text = "Scenes list:"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SceneChanger" type="Node" parent="."]
+
+script/script = ExtResource( 1 )
+
+[node name="ButtonGroup" type="VButtonArray" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 115.0
+margin/top = 175.0
+margin/right = 194.0
+margin/bottom = 239.0
+flat = false
+button/count = 0
+button/min_button_size = -1.0
+button/align = 112
+
+[node name="walk_jump button" type="Button" parent="ButtonGroup"]
+
+rect/min_size = Vector2( 64, 32 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 79.0
+margin/bottom = 32.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+text = "walk_jump"
+flat = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="released" from="ButtonGroup/walk_jump button" to="SceneChanger" method="_on_walk_jump_button_released"]
 
 
