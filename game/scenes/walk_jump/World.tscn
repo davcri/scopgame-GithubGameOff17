@@ -2,12 +2,12 @@
 
 [ext_resource path="res://game/scenes/walk_jump/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://game/scenes/walk_jump/Player.gd" type="Script" id=2]
-[ext_resource path="res://game/scenes/walk_jump/icon.png" type="Texture" id=3]
+[ext_resource path="res://game/scenes/walk_jump/Dan_the_furious_rabbit.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 26.2595, 25.2271 )
+extents = Vector2( 19.6678, 18.219 )
 
 [node name="World" type="Node"]
 
@@ -49,11 +49,10 @@ tile_data = IntArray( 262155, 6, 327691, 5, 393227, 4 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 486, 266 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.849091, 0.773865 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1.49615, 9.18573 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -66,7 +65,7 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 
-transform/pos = Vector2( 0.849091, 0.773865 )
+transform/pos = Vector2( 1.49615, 9.18573 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
