@@ -5,17 +5,17 @@
 [ext_resource path="res://game/scenes/walk_jump/assets/dreamlord.png" type="Texture" id=3]
 [ext_resource path="res://game/scenes/walk_jump/assets/dreamlord_message1.ogg" type="AudioStream" id=4]
 [ext_resource path="res://game/scenes/walk_jump/Player.gd" type="Script" id=5]
-[ext_resource path="res://game/scenes/walk_jump/Dan_the_furious_rabbit.png" type="Texture" id=6]
+[ext_resource path="res://game/scenes/walk_jump/assets/Dan_the_furious_rabbit.png" type="Texture" id=6]
 [ext_resource path="res://game/scenes/walk_jump/PlayerCamera.gd" type="Script" id=7]
 [ext_resource path="res://game/scenes/walk_jump/assets/future_city_theme.ogg" type="AudioStream" id=8]
 [ext_resource path="res://game/scenes/walk_jump/StreamPlayer.gd" type="Script" id=9]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 64, 64 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 19.6678, 18.219 )
@@ -63,7 +63,7 @@ tile_data = IntArray( 262155, 6, 327691, 5, 393227, 4 )
 editor/display_folded = true
 transform/pos = Vector2( 1600, 384 )
 input/pickable = true
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -85,7 +85,7 @@ __meta__ = {
 
 [node name="AreaTrigger" type="CollisionShape2D" parent="DreamLordTrigger"]
 
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -115,7 +115,7 @@ stream/buffering_ms = 500
 editor/display_folded = true
 transform/pos = Vector2( 486, 266 )
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.849091, 0.773865 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -133,7 +133,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 
 transform/pos = Vector2( 0.849091, 0.773865 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
