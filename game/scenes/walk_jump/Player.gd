@@ -42,7 +42,7 @@ func _ready():
 
 
 func _input(event):
-	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed("jump"):
+	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed("jump") && speed.y == 0:
 		speed.y = - JUMP_FORCE
 		jump_count += 1
 
