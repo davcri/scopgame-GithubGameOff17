@@ -2,7 +2,7 @@ extends StreamPlayer
 
 
 func _ready():
-	self.set_volume(0.5)  # Halves volume
+	self.set_volume(0.1)  # Halves volume
 	self.play()
 	
 

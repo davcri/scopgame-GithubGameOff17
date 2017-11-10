@@ -30,6 +30,8 @@ const MAX_FALL_SPEED = 1400
 # limiteremo a 1 il numero di salti che può compiere il giocatore prima di
 # ritoccare terra (già 2 sarebbero esagerati nel nostro caso)
 var jump_count = 0
+var jump_pos = Vector2()  # posizione al momento del salto
+
 # rendendola una var anziché const si potrebbe, più avanti nel gioco, con
 # qualche upgrade potenziarla, in questo caso non ci interessa
 const MAX_JUMP_COUNT = 1
@@ -39,12 +41,14 @@ func _ready():
 	set_process_input(true)
 	# va inserito il path, essendo child diretto basta "Sprite"
 	sprite_node = get_node("Sprite")
+	jump_pos = get_pos()
 
 
 func _input(event):
 	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed("jump"):
 		speed.y = - JUMP_FORCE
 		jump_count += 1
+		jump_pos = get_pos()  # FIX
 
 
 func _process(delta):
@@ -118,3 +122,15 @@ func _process(delta):
 		# se il vettore normale // asse y (0, +-1) allora si tratta del ground
 		if normal == Vector2(0 , -1):
 			jump_count = 0
+	
+	if is_falled():
+		set_pos(jump_pos)
+		var awareness_bar = get_node("../AwarenessBar")
+		awareness_bar.decrease(50)
+
+
+
+const FALL_POSITION = 1000
+
+func is_falled():
+	return get_pos().y > FALL_POSITION
