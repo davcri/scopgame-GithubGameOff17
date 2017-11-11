@@ -40,7 +40,7 @@ var jump_pos = Vector2()  # posizione al momento del salto
 const MAX_JUMP_COUNT = 1
 
 func _ready():
-	set_process(true)
+	set_fixed_process(true)
 	set_process_input(true)
 	# va inserito il path, essendo child diretto basta "Sprite"
 	sprite_node = get_node("Sprite")
@@ -52,14 +52,15 @@ func _input(event):
 	
 	if input_inverted:
 		jump_action = "move_down"
+		
 	
-	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed(jump_action) && speed.y == 0:
+	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed(jump_action) && floor(speed.y) == 0:
 		speed.y = - JUMP_FORCE
 		jump_count += 1
 		jump_pos = get_pos()  # FIX
 
 
-func _process(delta):
+func _fixed_process(delta):
 	input_direction = get_input_direction()
 
 	# MOVEMENT
@@ -157,7 +158,7 @@ func is_falled():
 	return get_pos().y > FALL_POSITION
 
 func disable_input():
-	set_process(false)
+	set_fixed_process(false)
 	# TODO Reset the level
 
 func invert_right_and_left_input(active):
