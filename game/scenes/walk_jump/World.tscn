@@ -184,4 +184,8 @@ script/script = ExtResource( 9 )
 
 [connection signal="enter_tree" from="StreamPlayer" to="Player" method="_on_StreamPlayer_enter_tree"]
 
+[connection signal="low_awareness" from="AwarenessBar" to="Player" method="_on_AwarenessBar_low_awareness"]
+
+[connection signal="zero_awareness" from="AwarenessBar" to="Player" method="_on_AwarenessBar_zero_awareness"]
+
 
