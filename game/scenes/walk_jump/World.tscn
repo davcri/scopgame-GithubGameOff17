@@ -12,6 +12,7 @@
 [ext_resource path="res://game/scenes/walk_jump/StreamPlayer.gd" type="Script" id=10]
 [ext_resource path="res://game/scenes/common/AwarenessBar/AwarenessBar.tscn" type="PackedScene" id=11]
 [ext_resource path="res://game/scenes/common/Collectible/collectible.tscn" type="PackedScene" id=12]
+[ext_resource path="res://game/scenes/common/FadeScene/Fade.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -239,6 +240,8 @@ transform/pos = Vector2( 1344.22, 265 )
 [node name="collectible3" parent="Collectibles" instance=ExtResource( 12 )]
 
 transform/pos = Vector2( -1521.78, 227 )
+
+[node name="Fade" parent="." instance=ExtResource( 13 )]
 
 [connection signal="DreamLordSpeaking" from="DreamLordTrigger" to="StreamPlayer" method="_on_DreamLordTrigger_DreamLordSpeaking"]
 
