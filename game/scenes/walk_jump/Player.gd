@@ -20,6 +20,8 @@ const MAX_SPEED = 442
 const ACCELERATION = 2600  # 2600 pixel per secondo al secondo
 const DECELERATION = 5000
 
+const FALL_DAMAGE = 25  # damage taken when falling into the void
+
 # jf "quanto in alto salta" forza opposta alla forza di gravità; nella maggior
 # parte degli engine l'asse y è negativo in alto e positivo in basso
 # orientato in modo da assecondare la forza di gravità. Ecco perché in
@@ -112,7 +114,7 @@ func _process(delta):
 	if is_falled():
 		set_pos(jump_pos)
 		var awareness_bar = get_node("../AwarenessBar")
-		awareness_bar.decrease(25)
+		awareness_bar.decrease(FALL_DAMAGE)
 
 
 func get_input_direction():
