@@ -53,7 +53,7 @@ func _input(event):
 	if input_inverted:
 		jump_action = "move_down"
 	
-	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed(jump_action):
+	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed(jump_action) && speed.y == 0:
 		speed.y = - JUMP_FORCE
 		jump_count += 1
 		jump_pos = get_pos()  # FIX
