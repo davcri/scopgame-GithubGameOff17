@@ -10,6 +10,7 @@ var sprite_node
 # nulla) , per risolvere distinguiamo tra "input_direction" e "direction" per
 # dare un'animazione più "smooth" fluida xD
 var input_direction = 0  # può essere 0, 1 (destra) o -1 (sinistra)
+var input_inverted = false
 var direction = 1
 
 var speed = Vector2()  # es: 200 pixel per secondo (indipendente dalla direzione)
@@ -52,22 +53,7 @@ func _input(event):
 
 
 func _process(delta):
-	# dobbiamo ascoltare se abbiamo input da parte del videogiocatore per far
-	# reagire il player a suddetto input questa condizione qui sotto anziché fare
-	# l'if potrei metterla sotto l'if di sotto, ma è molto meglio pensare all'organizzazione
-	# del codice che non alle performance! quindi qui è la sezione:
-	# INPUT
-	if input_direction:
-		direction = input_direction		# in modo da avere solo -1 e 1 e non 0 che non passa l'if
-
-	if Input.is_action_pressed("move_left"):
-		input_direction = -1
-		sprite_node.set_flip_h(true) # true perché di default guarda a destra
-	elif Input.is_action_pressed("move_right"):
-		input_direction = 1
-		sprite_node.set_flip_h(false)
-	else:
-		input_direction = 0
+	input_direction = get_input_direction()
 
 	# MOVEMENT
 	if input_direction == -direction:
@@ -126,11 +112,66 @@ func _process(delta):
 	if is_falled():
 		set_pos(jump_pos)
 		var awareness_bar = get_node("../AwarenessBar")
-		awareness_bar.decrease(50)
+		awareness_bar.decrease(25)
 
+
+func get_input_direction():
+	# dobbiamo ascoltare se abbiamo input da parte del videogiocatore per far
+	# reagire il player a suddetto input questa condizione qui sotto anziché fare
+	# l'if potrei metterla sotto l'if di sotto, ma è molto meglio pensare all'organizzazione
+	# del codice che non alle performance! quindi qui è la sezione:
+	# INPUT
+	var action_left
+	var action_right
+	var input_dir
+	
+	if input_inverted:
+		action_left = "move_right"
+		action_right = "move_left"
+	else:
+		action_left = "move_left"
+		action_right = "move_right"
+		
+	if input_direction:
+		direction = input_direction  # in modo da avere solo -1 e 1 e non 0 che non passa l'if
+
+	if Input.is_action_pressed(action_left):
+		input_dir = -1
+		sprite_node.set_flip_h(true) # true perché di default guarda a destra
+	elif Input.is_action_pressed(action_right):
+		input_dir = 1
+		sprite_node.set_flip_h(false)
+	else:
+		input_dir = 0
+		
+	return input_dir
 
 
 const FALL_POSITION = 1000
 
 func is_falled():
 	return get_pos().y > FALL_POSITION
+
+func disable_input():
+	set_process(false)
+	# TODO Reset the level
+
+func invert_right_and_left_input(active):
+	print("INPUT INVERTED")
+	
+	if active:
+		input_inverted = true
+	else: 
+		input_inverted = false
+
+# -----------------------------
+# Methods for handling signals
+# -----------------------------
+
+func _on_AwarenessBar_low_awareness():
+	print("LOW AWARENESS")
+	invert_right_and_left_input(true)
+
+func _on_AwarenessBar_zero_awareness():
+	print("DEAD")
+	disable_input()
