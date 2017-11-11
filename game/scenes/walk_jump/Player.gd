@@ -48,7 +48,12 @@ func _ready():
 
 
 func _input(event):
-	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed("jump"):
+	var jump_action = "jump"
+	
+	if input_inverted:
+		jump_action = "move_down"
+	
+	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed(jump_action):
 		speed.y = - JUMP_FORCE
 		jump_count += 1
 		jump_pos = get_pos()  # FIX
@@ -123,16 +128,13 @@ func get_input_direction():
 	# l'if potrei metterla sotto l'if di sotto, ma è molto meglio pensare all'organizzazione
 	# del codice che non alle performance! quindi qui è la sezione:
 	# INPUT
-	var action_left
-	var action_right
+	var action_left = "move_left"
+	var action_right = "move_right"
 	var input_dir
 	
 	if input_inverted:
-		action_left = "move_right"
+		action_left = "move_right" 
 		action_right = "move_left"
-	else:
-		action_left = "move_left"
-		action_right = "move_right"
 		
 	if input_direction:
 		direction = input_direction  # in modo da avere solo -1 e 1 e non 0 che non passa l'if
@@ -163,7 +165,7 @@ func invert_right_and_left_input(active):
 	
 	if active:
 		input_inverted = true
-	else: 
+	else:
 		input_inverted = false
 
 # -----------------------------
