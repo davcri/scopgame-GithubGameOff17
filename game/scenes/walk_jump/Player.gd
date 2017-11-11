@@ -53,7 +53,7 @@ func _input(event):
 	if input_inverted:
 		jump_action = "move_down"
 		
-	print(speed.y)
+	
 	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed(jump_action) && floor(speed.y) == 0:
 		speed.y = - JUMP_FORCE
 		jump_count += 1
@@ -158,7 +158,7 @@ func is_falled():
 	return get_pos().y > FALL_POSITION
 
 func disable_input():
-	set_process(false)
+	set_fixed_process(false)
 	# TODO Reset the level
 
 func invert_right_and_left_input(active):
