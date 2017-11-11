@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://game/scenes/walk_jump/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://game/scenes/walk_jump/AreaDetection.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://game/scenes/walk_jump/PlayerCamera.gd" type="Script" id=7]
 [ext_resource path="res://game/scenes/walk_jump/assets/future_city_theme.ogg" type="AudioStream" id=8]
 [ext_resource path="res://game/scenes/walk_jump/StreamPlayer.gd" type="Script" id=9]
+[ext_resource path="res://game/scenes/common/AwarenessBar/AwarenessBar.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -175,10 +176,16 @@ stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
 script/script = ExtResource( 9 )
 
+[node name="AwarenessBar" parent="." instance=ExtResource( 10 )]
+
 [connection signal="DreamLordSpeaking" from="DreamLordTrigger" to="StreamPlayer" method="_on_DreamLordTrigger_DreamLordSpeaking"]
 
 [connection signal="body_enter" from="DreamLordTrigger" to="DreamLordTrigger" method="_on_Area2D_body_enter"]
 
 [connection signal="enter_tree" from="StreamPlayer" to="Player" method="_on_StreamPlayer_enter_tree"]
+
+[connection signal="low_awareness" from="AwarenessBar" to="Player" method="_on_AwarenessBar_low_awareness"]
+
+[connection signal="zero_awareness" from="AwarenessBar" to="Player" method="_on_AwarenessBar_zero_awareness"]
 
 
