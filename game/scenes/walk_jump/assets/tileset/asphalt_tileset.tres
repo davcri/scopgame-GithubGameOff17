@@ -14,27 +14,27 @@
 [ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_hole_right.png" type="Texture" id=12]
 [ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/car_white_left.png" type="Texture" id=13]
 
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
-
-[sub_resource type="RectangleShape2D" id=6]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
-
-[sub_resource type="RectangleShape2D" id=7]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
-
-[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
@@ -49,7 +49,7 @@ extents = Vector2( 32, 32 )
 0/occluder_offset = Vector2( 32, 32 )
 0/navigation_offset = Vector2( 32, 32 )
 0/shape_offset = Vector2( 32, 32 )
-0/shapes = [ SubResource( 4 ) ]
+0/shapes = [ SubResource( 1 ) ]
 0/one_way_collision_direction = Vector2( 0, 0 )
 0/one_way_collision_max_depth = 0.0
 1/name = "asphalt_manhole"
@@ -60,7 +60,7 @@ extents = Vector2( 32, 32 )
 1/occluder_offset = Vector2( 32, 32 )
 1/navigation_offset = Vector2( 32, 32 )
 1/shape_offset = Vector2( 32, 32 )
-1/shapes = [ SubResource( 5 ) ]
+1/shapes = [ SubResource( 2 ) ]
 1/one_way_collision_direction = Vector2( 0, 0 )
 1/one_way_collision_max_depth = 0.0
 2/name = "asphalt_puddle_left"
@@ -71,7 +71,7 @@ extents = Vector2( 32, 32 )
 2/occluder_offset = Vector2( 32, 32 )
 2/navigation_offset = Vector2( 32, 32 )
 2/shape_offset = Vector2( 32, 32 )
-2/shapes = [ SubResource( 6 ) ]
+2/shapes = [ SubResource( 3 ) ]
 2/one_way_collision_direction = Vector2( 0, 0 )
 2/one_way_collision_max_depth = 0.0
 3/name = "asphalt_puddle_center"
@@ -82,7 +82,7 @@ extents = Vector2( 32, 32 )
 3/occluder_offset = Vector2( 32, 32 )
 3/navigation_offset = Vector2( 32, 32 )
 3/shape_offset = Vector2( 32, 32 )
-3/shapes = [ SubResource( 7 ) ]
+3/shapes = [ SubResource( 4 ) ]
 3/one_way_collision_direction = Vector2( 0, 0 )
 3/one_way_collision_max_depth = 0.0
 4/name = "asphalt_puddle_right"
@@ -93,7 +93,7 @@ extents = Vector2( 32, 32 )
 4/occluder_offset = Vector2( 32, 32 )
 4/navigation_offset = Vector2( 32, 32 )
 4/shape_offset = Vector2( 32, 32 )
-4/shapes = [ SubResource( 8 ) ]
+4/shapes = [ SubResource( 5 ) ]
 4/one_way_collision_direction = Vector2( 0, 0 )
 4/one_way_collision_max_depth = 0.0
 5/name = "asphalt_cola_can"
@@ -104,7 +104,7 @@ extents = Vector2( 32, 32 )
 5/occluder_offset = Vector2( 32, 32 )
 5/navigation_offset = Vector2( 32, 32 )
 5/shape_offset = Vector2( 32, 32 )
-5/shapes = [ SubResource( 8 ) ]
+5/shapes = [ SubResource( 5 ) ]
 5/one_way_collision_direction = Vector2( 0, 0 )
 5/one_way_collision_max_depth = 0.0
 6/name = "asphalt_hole_left"
@@ -115,7 +115,7 @@ extents = Vector2( 32, 32 )
 6/occluder_offset = Vector2( 24, 32 )
 6/navigation_offset = Vector2( 24, 32 )
 6/shape_offset = Vector2( 24, 32 )
-6/shapes = [ SubResource( 8 ) ]
+6/shapes = [ SubResource( 5 ) ]
 6/one_way_collision_direction = Vector2( 0, 0 )
 6/one_way_collision_max_depth = 0.0
 7/name = "asphalt_hole_center"
@@ -137,7 +137,7 @@ extents = Vector2( 32, 32 )
 8/occluder_offset = Vector2( 40, 32 )
 8/navigation_offset = Vector2( 40, 32 )
 8/shape_offset = Vector2( 40, 32 )
-8/shapes = [ SubResource( 8 ) ]
+8/shapes = [ SubResource( 5 ) ]
 8/one_way_collision_direction = Vector2( 0, 0 )
 8/one_way_collision_max_depth = 0.0
 9/name = "white_car_back"
@@ -148,7 +148,7 @@ extents = Vector2( 32, 32 )
 9/occluder_offset = Vector2( 32, 32 )
 9/navigation_offset = Vector2( 32, 32 )
 9/shape_offset = Vector2( 32, 32 )
-9/shapes = [ SubResource( 4 ) ]
+9/shapes = [ SubResource( 1 ) ]
 9/one_way_collision_direction = Vector2( 0, 0 )
 9/one_way_collision_max_depth = 0.0
 10/name = "white_car_front"
@@ -159,7 +159,7 @@ extents = Vector2( 32, 32 )
 10/occluder_offset = Vector2( 32, 32 )
 10/navigation_offset = Vector2( 32, 32 )
 10/shape_offset = Vector2( 32, 32 )
-10/shapes = [ SubResource( 4 ) ]
+10/shapes = [ SubResource( 1 ) ]
 10/one_way_collision_direction = Vector2( 0, 0 )
 10/one_way_collision_max_depth = 0.0
 11/name = "red_car_back"
@@ -170,7 +170,7 @@ extents = Vector2( 32, 32 )
 11/occluder_offset = Vector2( 32, 32 )
 11/navigation_offset = Vector2( 32, 32 )
 11/shape_offset = Vector2( 32, 32 )
-11/shapes = [ SubResource( 4 ) ]
+11/shapes = [ SubResource( 1 ) ]
 11/one_way_collision_direction = Vector2( 0, 0 )
 11/one_way_collision_max_depth = 0.0
 12/name = "red_car_back1"
@@ -181,7 +181,7 @@ extents = Vector2( 32, 32 )
 12/occluder_offset = Vector2( 32, 32 )
 12/navigation_offset = Vector2( 32, 32 )
 12/shape_offset = Vector2( 32, 32 )
-12/shapes = [ SubResource( 4 ) ]
+12/shapes = [ SubResource( 1 ) ]
 12/one_way_collision_direction = Vector2( 0, 0 )
 12/one_way_collision_max_depth = 0.0
 
