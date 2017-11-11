@@ -260,14 +260,10 @@ __meta__ = {
 
 [node name="asphalt_hole_left" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 448, 64 )
 texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 0, 0, 64, 64 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="asphalt_hole_left"]
 
@@ -283,18 +279,12 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_hole_left/StaticBody2D"]
 
 shape = SubResource( 8 )
 trigger = false
 _update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="asphalt_hole_center" type="Sprite" parent="."]
 
