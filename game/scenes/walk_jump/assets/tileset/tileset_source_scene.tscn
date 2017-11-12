@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=1]
+[gd_scene load_steps=42 format=1]
 
 [ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_normal.png" type="Texture" id=1]
 [ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_manhole/asphalt_normal_manhole.png" type="Texture" id=2]
@@ -103,10 +103,15 @@ points = Vector2Array( 0, 24, -40, 24, -40, -24, -16, -24, 0, -8 )
 custom_solver_bias = 0.0
 points = Vector2Array( 0, 24, 0, -8, 24, -8, 32, 0, 32, 16, 16, 32, 8, 32 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 
 custom_solver_bias = 0.0
-extents = Vector2( 13, 13 )
+points = Vector2Array( -16, 32, -32, 32, -32, -32, -16, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 32, -32, 32, 32, 16, 32, 16, -32 )
 
 [sub_resource type="RectangleShape2D" id=18]
 
@@ -743,7 +748,6 @@ __meta__ = {
 
 [node name="asphalt_opened_manhole" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 320, 128 )
 texture = ExtResource( 18 )
 region = true
@@ -752,11 +756,11 @@ region_rect = Rect2( 0, 0, 64, 64 )
 [node name="StaticBody2D" type="StaticBody2D" parent="asphalt_opened_manhole"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 12 )
-shapes/0/transform = Matrix32( 0.307692, 0, 0, 2.46154, -28, 2.38419e-06 )
+shapes/0/shape = SubResource( 19 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 12 )
-shapes/1/transform = Matrix32( 0.307692, 0, 0, 2.46154, 28, 0 )
+shapes/1/shape = SubResource( 20 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -768,27 +772,19 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_opened_manhole/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="asphalt_opened_manhole/StaticBody2D"]
 
-transform/pos = Vector2( -28, 2.38419e-06 )
-transform/scale = Vector2( 0.307692, 2.46154 )
-shape = SubResource( 12 )
+build_mode = 0
+polygon = Vector2Array( -16, -32, -32, -32, -32, 32, -16, 32 )
+shape_range = Vector2( 0, 0 )
 trigger = false
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="CollisionShape2D1" type="CollisionShape2D" parent="asphalt_opened_manhole/StaticBody2D"]
+[node name="CollisionPolygon2D 2" type="CollisionPolygon2D" parent="asphalt_opened_manhole/StaticBody2D"]
 
-transform/pos = Vector2( 28, 0 )
-transform/scale = Vector2( 0.307692, 2.46154 )
-shape = SubResource( 12 )
+build_mode = 0
+polygon = Vector2Array( 16, -32, 16, 32, 32, 32, 32, -32 )
+shape_range = Vector2( 1, 1 )
 trigger = false
-_update_shape_index = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="street_lamp_top_left" type="Sprite" parent="."]
 
