@@ -267,3 +267,4 @@ margin/bottom = 361.0
 [connection signal="zero_awareness" from="AwarenessBar" to="Player" method="_on_AwarenessBar_zero_awareness"]
 
 
+[editable path="RichTextLabel"]
