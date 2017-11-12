@@ -27,4 +27,4 @@ func reveal_dream_lord():
 	
 	var voice = get_node("Voice")
 	voice.play()
-	emit_signal("DreamLordSpeaking")
+	emit_signal("DreamLordSpeaking", [duration])
