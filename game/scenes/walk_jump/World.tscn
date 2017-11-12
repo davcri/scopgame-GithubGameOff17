@@ -253,8 +253,6 @@ max_lines_visible = -1
 
 [connection signal="body_enter" from="DreamLordTrigger" to="DreamLordTrigger" method="_on_Area2D_body_enter"]
 
-[connection signal="enter_tree" from="StreamPlayer" to="Player" method="_on_StreamPlayer_enter_tree"]
-
 [connection signal="low_awareness" from="AwarenessBar" to="Player" method="_on_AwarenessBar_low_awareness"]
 
 [connection signal="zero_awareness" from="AwarenessBar" to="Player" method="_on_AwarenessBar_zero_awareness"]
