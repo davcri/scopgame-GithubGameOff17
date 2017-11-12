@@ -62,7 +62,12 @@ func _input(event):
 		var interactibles = get_tree().get_nodes_in_group("interactible")
 		for i in interactibles:
 			i.action()
-			
+	
+	if event.is_action_released("move_down"):
+		var gpos = get_global_pos()
+		var tileset = get_node("/root/World/background")
+		var tile_pos = tileset.world_to_map(gpos) + Vector2(0, 1)
+		tileset.set_cell(tile_pos.x, tile_pos.y, -1)
 
 func _fixed_process(delta):
 	input_direction = get_input_direction()
