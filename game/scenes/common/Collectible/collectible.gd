@@ -10,10 +10,10 @@ func _ready():
 	# totali e quelli raccolti dal giocatore
 	if get_owner() != null:
 		get_owner().collectible_total += value
-	get_owner().get_node("AwarenessBar/Collectibles_Total").set_text(
-			" Total Scoppol : " + str(get_owner().collectible_total))
+		get_owner().get_node("AwarenessBar/Collectibles_Total").set_text(
+				" Total Scoppol : " + str(get_owner().collectible_total))
 
- get_node("Area2D").connect("body_enter", self, "_take_collectible")
+
 # abbiamo colleganto il segnale body_enter di Area2D del collezionabile
 # che manda un segnale quando il player collide con un collezionabile
 # e messo la seguente function _take_collectible legata al segnale
