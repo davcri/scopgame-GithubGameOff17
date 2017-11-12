@@ -23,7 +23,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 64, 64 )
 
-[sub_resource type="SampleLibrary" id=4]
+[sub_resource type="SampleLibrary" id=2]
 
 samples/toggle = {
 "db": 0.0,
@@ -37,7 +37,7 @@ samples/toggle = {
 custom_solver_bias = 0.0
 extents = Vector2( 26.1439, 32 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 19.6678, 11.6272 )
@@ -100,6 +100,7 @@ stream/buffering_ms = 500
 
 [node name="background" type="TileMap" parent="."]
 
+editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 5 )
 cell/size = Vector2( 64, 64 )
@@ -128,7 +129,7 @@ params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
 config/polyphony = 1
-config/samples = SubResource( 4 )
+config/samples = SubResource( 2 )
 config/pitch_random = 0.0
 
 [node name="InteractPoint" type="Area2D" parent="background" groups=[
@@ -175,7 +176,7 @@ tile_data = IntArray( 63, 6, 65599, 6, 131135, 6, 196671, 6, 262207, 6, 327743, 
 editor/display_folded = true
 transform/pos = Vector2( 486, 266 )
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 4 )
 shapes/0/transform = Matrix32( 0.954855, 0, 0, 1.46686, 1.87244, 8.68721 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -194,7 +195,7 @@ __meta__ = {
 
 transform/pos = Vector2( 1.87244, 8.68721 )
 transform/scale = Vector2( 0.954855, 1.46686 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -348,13 +349,13 @@ max_lines_visible = -1
 
 [connection signal="body_enter" from="DreamLordTrigger" to="DreamLordTrigger" method="_on_Area2D_body_enter"]
 
-[connection signal="body_enter" from="background/InteractPoint" to="Player" method="_on_InteractPoint_body_enter"]
-
 [connection signal="body_enter" from="background/InteractPoint" to="background/InteractPoint" method="_on_InteractPoint_body_enter"]
 
-[connection signal="body_exit" from="background/InteractPoint" to="Player" method="_on_InteractPoint_body_exit"]
+[connection signal="body_enter" from="background/InteractPoint" to="Player" method="_on_InteractPoint_body_enter"]
 
 [connection signal="body_exit" from="background/InteractPoint" to="background/InteractPoint" method="_on_InteractPoint_body_exit"]
+
+[connection signal="body_exit" from="background/InteractPoint" to="Player" method="_on_InteractPoint_body_exit"]
 
 [connection signal="enter_tree" from="StreamPlayer" to="Player" method="_on_StreamPlayer_enter_tree"]
 
