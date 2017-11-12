@@ -53,12 +53,16 @@ func _input(event):
 	if input_inverted:
 		jump_action = "move_down"
 		
-	
 	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed(jump_action) && floor(speed.y) == 0:
 		speed.y = - JUMP_FORCE
 		jump_count += 1
 		jump_pos = get_pos()  # FIX
-
+	
+	if event.is_action_released("action"):
+		var interactibles = get_tree().get_nodes_in_group("interactible")
+		for i in interactibles:
+			i.action()
+			
 
 func _fixed_process(delta):
 	input_direction = get_input_direction()
@@ -180,3 +184,12 @@ func _on_AwarenessBar_low_awareness():
 func _on_AwarenessBar_zero_awareness():
 	print("DEAD")
 	disable_input()
+
+
+func _on_InteractPoint_body_enter(body):
+	if body.get_name() == "Player":
+		get_node("InteractIcon").set_opacity(1)
+
+func _on_InteractPoint_body_exit(body):
+	if body.get_name() == "Player":
+		get_node("InteractIcon").set_opacity(0)
