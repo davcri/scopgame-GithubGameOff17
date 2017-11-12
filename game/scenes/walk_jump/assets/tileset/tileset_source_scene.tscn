@@ -1,15 +1,47 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=19 format=1]
 
-[ext_resource path="res://game/scenes/walk_jump/assets/tileset/tiles_demo.png" type="Texture" id=1]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_normal.png" type="Texture" id=1]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_normal_manhole.png" type="Texture" id=2]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_normal_puddle_left.png" type="Texture" id=3]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_normal_puddle_center.png" type="Texture" id=4]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_normal_puddle_right.png" type="Texture" id=5]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_normal_cola_can.png" type="Texture" id=6]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_hole_left.png" type="Texture" id=7]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_hole_centre.png" type="Texture" id=8]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/asphalt_hole_right.png" type="Texture" id=9]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/car_white_left.png" type="Texture" id=10]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/car_white_right.png" type="Texture" id=11]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/car_red_left.png" type="Texture" id=12]
+[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt/car_red_right.png" type="Texture" id=13]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="terrain1" type="Sprite" parent="."]
+[node name="asphalt_normal" type="Sprite" parent="."]
 
 editor/display_folded = true
 transform/pos = Vector2( 64, 64 )
@@ -20,11 +52,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="terrain1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="asphalt_normal"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.90735e-06, -1.90735e-06 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -32,31 +64,35 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="terrain1/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_normal/StaticBody2D"]
 
-shape = SubResource( 1 )
+transform/pos = Vector2( -1.90735e-06, -1.90735e-06 )
+shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="terrain2" type="Sprite" parent="."]
+[node name="asphalt_manhole" type="Sprite" parent="."]
 
 editor/display_folded = true
 transform/pos = Vector2( 128, 64 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 region = true
-region_rect = Rect2( 0, 64, 64, 64 )
+region_rect = Rect2( 0, 0, 64, 64 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D1" type="StaticBody2D" parent="terrain2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="asphalt_manhole"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -65,31 +101,34 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="terrain2/StaticBody2D1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_manhole/StaticBody2D"]
 
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="terrain3" type="Sprite" parent="."]
+[node name="asphalt_puddle_left" type="Sprite" parent="."]
 
 editor/display_folded = true
 transform/pos = Vector2( 192, 64 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 region = true
-region_rect = Rect2( 192, 192, 64, 64 )
+region_rect = Rect2( 0, 0, 64, 64 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="terrain3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="asphalt_puddle_left"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 6 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -98,31 +137,34 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="terrain3/StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_puddle_left/StaticBody2D"]
 
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tree1" type="Sprite" parent="."]
+[node name="asphalt_puddle_center" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 64, 320 )
-texture = ExtResource( 1 )
+transform/pos = Vector2( 256, 64 )
+texture = ExtResource( 4 )
 region = true
-region_rect = Rect2( 256, 192, 64, 64 )
+region_rect = Rect2( 0, 0, 64, 64 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="tree1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="asphalt_puddle_center"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 7 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -131,31 +173,34 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tree1/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_puddle_center/StaticBody2D"]
 
-shape = SubResource( 1 )
+shape = SubResource( 7 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tree2" type="Sprite" parent="."]
+[node name="asphalt_puddle_right" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 64, 256 )
-texture = ExtResource( 1 )
+transform/pos = Vector2( 320, 64 )
+texture = ExtResource( 5 )
 region = true
-region_rect = Rect2( 256, 128, 64, 64 )
+region_rect = Rect2( 0, 0, 64, 64 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="tree2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="asphalt_puddle_right"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 8 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -164,32 +209,34 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tree2/StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_puddle_right/StaticBody2D"]
 
-shape = SubResource( 1 )
+shape = SubResource( 8 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tree3" type="Sprite" parent="."]
+[node name="asphalt_cola_can" type="Sprite" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 64, 192 )
-texture = ExtResource( 1 )
+transform/pos = Vector2( 384, 64 )
+texture = ExtResource( 6 )
 region = true
-region_rect = Rect2( 256, 64, 64, 64 )
+region_rect = Rect2( 0, 0, 64, 64 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="tree3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="asphalt_cola_can"]
 
-editor/display_folded = true
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 8 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -198,31 +245,32 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tree3/StaticBody2D5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_cola_can/StaticBody2D"]
 
-shape = SubResource( 1 )
+shape = SubResource( 8 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="tree4" type="Sprite" parent="."]
+[node name="asphalt_hole_left" type="Sprite" parent="."]
 
-editor/display_folded = true
-transform/pos = Vector2( 64, 128 )
-texture = ExtResource( 1 )
+transform/pos = Vector2( 448, 64 )
+texture = ExtResource( 7 )
 region = true
-region_rect = Rect2( 256, 0, 64, 64 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2( 0, 0, 64, 64 )
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="tree4"]
+[node name="StaticBody2D" type="StaticBody2D" parent="asphalt_hole_left"]
 
+transform/pos = Vector2( -8.00001, 0 )
+transform/scale = Vector2( 0.75, 1 )
 input/pickable = false
-shapes/0/shape = SubResource( 1 )
+shapes/0/shape = SubResource( 8 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -232,9 +280,216 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tree4/StaticBody2D6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_hole_left/StaticBody2D"]
 
-shape = SubResource( 1 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
+
+[node name="asphalt_hole_center" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 512, 64 )
+texture = ExtResource( 8 )
+region = true
+region_rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="asphalt_hole_center"]
+
+input/pickable = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="asphalt_hole_right" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 576, 64 )
+texture = ExtResource( 9 )
+region = true
+region_rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="asphalt_hole_right"]
+
+transform/pos = Vector2( 8, 0 )
+transform/scale = Vector2( 0.75, 1 )
+input/pickable = false
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="asphalt_hole_right/StaticBody2D"]
+
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="white_car_back" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 640, 64 )
+texture = ExtResource( 10 )
+region = true
+region_rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="white_car_back"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.90735e-06, -1.90735e-06 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="white_car_back/StaticBody2D"]
+
+transform/pos = Vector2( -1.90735e-06, -1.90735e-06 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="white_car_front" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 704, 64 )
+texture = ExtResource( 11 )
+region = true
+region_rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="white_car_front"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.90735e-06, -1.90735e-06 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="white_car_front/StaticBody2D"]
+
+transform/pos = Vector2( -1.90735e-06, -1.90735e-06 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="red_car_back" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 768, 64 )
+texture = ExtResource( 12 )
+region = true
+region_rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="red_car_back"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.90735e-06, -1.90735e-06 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="red_car_back/StaticBody2D"]
+
+transform/pos = Vector2( -1.90735e-06, -1.90735e-06 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="red_car_back1" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 832, 64 )
+texture = ExtResource( 13 )
+region = true
+region_rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="red_car_back1"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.90735e-06, -1.90735e-06 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="red_car_back1/StaticBody2D"]
+
+transform/pos = Vector2( -1.90735e-06, -1.90735e-06 )
+shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {

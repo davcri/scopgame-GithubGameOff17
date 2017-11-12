@@ -26,7 +26,7 @@ const FALL_DAMAGE = 25  # damage taken when falling into the void
 # parte degli engine l'asse y è negativo in alto e positivo in basso
 # orientato in modo da assecondare la forza di gravità. Ecco perché in
 # func input è MENO JUMP_FORCE (l'asse x rimane invariato)
-const JUMP_FORCE = 900
+const JUMP_FORCE = 800
 const GRAVITY = 2000
 const MAX_FALL_SPEED = 1400
 
