@@ -1,5 +1,9 @@
 extends Node2D
-var dialog = ["Steam's Sales are coming "," You Must Buy","Mattia è nabbo"]
+
+# class member variables go here, for example:
+# var a = 2
+# var b = "textvar"
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
@@ -8,6 +12,5 @@ func _ready():
 
 func _on_DreamLordTrigger_body_enter( body ):
 	var Textlabel = get_node("RichTextLabel")
-	if body.get_name() == "Player":
-		Textlabel.revealText(body, dialog)
-	pass # rplace with function b ody
+	Textlabel.triggerati(body)
+	pass # rplace with function body

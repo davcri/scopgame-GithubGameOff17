@@ -257,7 +257,11 @@ max_lines_visible = -1
 
 [node name="DialogBox" parent="." instance=ExtResource( 15 )]
 
+transform/pos = Vector2( 1695.51, 357.272 )
+
 [connection signal="DreamLordSpeaking" from="DreamLordTrigger" to="StreamPlayer" method="_on_DreamLordTrigger_DreamLordSpeaking"]
+
+[connection signal="body_enter" from="DreamLordTrigger" to="DialogBox" method="_on_DreamLordTrigger_body_enter"]
 
 [connection signal="body_enter" from="DreamLordTrigger" to="DreamLordTrigger" method="_on_Area2D_body_enter"]
 
