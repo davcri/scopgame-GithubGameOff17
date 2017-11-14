@@ -18,7 +18,9 @@ func _on_Timer_timeout():
 	timer.start()
 
 
-func revealText (body, message):
+func revealText (body, dialog):
+	message=dialog
+	print(message[page])
 	set_bbcode(message[page])
 	print("sono il figlio")
 	timer = get_node("Timer")

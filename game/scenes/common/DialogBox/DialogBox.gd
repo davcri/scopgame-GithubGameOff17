@@ -17,4 +17,4 @@ func _on_DreamLordTrigger_body_enter( body ):
 	if body.get_name() == "Player":
 		print ("sono il padre")
 		textlabel.revealText(body, message)
-	
+	pass
