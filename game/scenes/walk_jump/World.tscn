@@ -23,7 +23,7 @@ extents = Vector2( 64, 64 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 19.6678, 11.6272 )
+extents = Vector2( 9.83252, 31.872 )
 
 [node name="World" type="Node"]
 
@@ -101,11 +101,10 @@ tile_data = IntArray( 327676, 39, 262188, 38, 393197, 32, 393212, 40, 327721, 35
 
 [node name="Player" type="KinematicBody2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 486, 266 )
 input/pickable = false
 shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 0.954855, 0, 0, 1.46686, 1.87244, 8.68721 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -121,8 +120,6 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 
-transform/pos = Vector2( 1.87244, 8.68721 )
-transform/scale = Vector2( 0.954855, 1.46686 )
 shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0

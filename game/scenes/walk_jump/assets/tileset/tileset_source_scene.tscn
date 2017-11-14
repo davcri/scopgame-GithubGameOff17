@@ -244,10 +244,10 @@ points = Vector2Array( 32, 16, 32, 24, -32, 24, -32, 16 )
 custom_solver_bias = 0.0
 points = Vector2Array( 32, 24, 32, 32, -32, 32, -32, 24 )
 
-[sub_resource type="ConvexPolygonShape2D" id=58]
+[sub_resource type="ConvexPolygonShape2D" id=68]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, -32, 16, -16, 16, 32, -32, 32 )
+points = Vector2Array( 16, -16, 16, 32, -32, 32, -32, -32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=59]
 
@@ -1248,6 +1248,7 @@ trigger = false
 
 [node name="manhole_base" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 192, 320 )
 texture = ExtResource( 29 )
 region = true
@@ -1393,7 +1394,6 @@ trigger = false
 
 [node name="gate_top" type="Sprite" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 448, 192 )
 texture = ExtResource( 33 )
 region = true
@@ -1405,7 +1405,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="gate_top"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 58 )
+shapes/0/shape = SubResource( 68 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1421,7 +1421,7 @@ __meta__ = {
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="gate_top/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -32, 32, 16, 32, 16, -16, -32, -32 )
+polygon = Vector2Array( -32, -32, -32, 32, 16, 32, 16, -16 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 

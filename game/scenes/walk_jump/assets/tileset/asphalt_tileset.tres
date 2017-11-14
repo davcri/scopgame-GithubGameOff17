@@ -57,74 +57,74 @@ extents = Vector2( 32, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=36]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -32, 0, 0, 24, -8, 32, -24, 16 )
+points = Vector2Array( 16, 24, 8, 32, 0, 24, 0, -8, 16, -8, 32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=37]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -24, 16, -32, 16, -32, 0 )
+points = Vector2Array( 0, 24, -32, 24, -32, -24, -16, -24, 0, -8 )
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
+points = Vector2Array( 16, 24, 32, 0, 32, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=39]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 16, 24, 8, 32, 0, 24, 0, -8, 16, -8, 32, 0 )
+points = Vector2Array( -8, -24, 24, -24, 24, 24, 0, 24, -32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=40]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 0, 24, -40, 24, -40, -24, -16, -24, 0, -8 )
+points = Vector2Array( -32, 0, 0, 24, -8, 32, -24, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=41]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 16, 24, 32, 0, 32, 16 )
+points = Vector2Array( -24, 16, -32, 16, -32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=42]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, 32, -32, 32, -32, -32 )
+points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 
-[sub_resource type="RectangleShape2D" id=43]
+[sub_resource type="ConvexPolygonShape2D" id=43]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+points = Vector2Array( 16, 24, 8, 32, 0, 24, 0, -8, 16, -8, 32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=44]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -16, 32, -32, 32, -32, -32, -16, -32 )
+points = Vector2Array( 0, 24, -40, 24, -40, -24, -16, -24, 0, -8 )
 
 [sub_resource type="ConvexPolygonShape2D" id=45]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, -32, 32, 32, 16, 32, 16, -32 )
+points = Vector2Array( 16, 24, 32, 0, 32, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=29]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -5, 10, -10, 7.24138, -10, -1.03448, 2.5, 7.24138, 0, 10 )
+points = Vector2Array( 32, 32, -32, 32, 32, -32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=46]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -16, 32, -32, 32, -32, -32, -16, -32 )
+points = Vector2Array( 32, 32, -32, 32, -32, -32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=31]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -5, 10, -10, 7.24138, -10, -1.03448, 2.5, 7.24138, 0, 10 )
-
-[sub_resource type="ConvexPolygonShape2D" id=26]
+[sub_resource type="RectangleShape2D" id=31]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -2.5, -9.31034, 10, -9.31034, 10, 7.24138, 2.5, 7.24138, -10, -1.03448 )
+extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=68]
+[sub_resource type="RectangleShape2D" id=26]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
@@ -137,64 +137,64 @@ extents = Vector2( 32, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=66]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, 24, 32, 32, -32, 32, -32, 24 )
+points = Vector2Array( 24, 32, -32, 32, -32, -32, 24, -32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=67]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 16, -32, 16, 32, -32, 32, -32, -32 )
+points = Vector2Array( 32, -32, 32, 32, -24, 32, -24, -32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=47]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, -32, 32, 24, 16, 24, 16, -32 )
+points = Vector2Array( -16, 32, -32, 32, -32, -32, -16, -32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=48]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -16, 32, -32, 32, -32, -32, -16, -32 )
+points = Vector2Array( 32, -32, 32, 32, 16, 32, 16, -32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=69]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -16, 32, -32, 32, -32, -32, -16, -32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=70]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32, -32, 32, 24, 16, 24, 16, -32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=71]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -16, 32, -32, 32, -32, -32, -16, -32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=72]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32, 24, 32, 32, -16, 32, -16, 24 )
 
-[sub_resource type="ConvexPolygonShape2D" id=73]
+[sub_resource type="ConvexPolygonShape2D" id=23]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32, 16, 32, 24, -32, 24, -32, 16 )
 
-[sub_resource type="RectangleShape2D" id=74]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=75]
+[sub_resource type="ConvexPolygonShape2D" id=24]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32, 24, 32, 32, -32, 32, -32, 24 )
 
-[sub_resource type="ConvexPolygonShape2D" id=58]
+[sub_resource type="ConvexPolygonShape2D" id=68]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
+points = Vector2Array( 16, -16, 16, 32, -32, 32, -32, -32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=76]
+[sub_resource type="ConvexPolygonShape2D" id=59]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 16, -32, 16, 32, -32, 32, -32, -32 )
@@ -204,12 +204,12 @@ points = Vector2Array( 16, -32, 16, 32, -32, 32, -32, -32 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=77]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=78]
+[sub_resource type="RectangleShape2D" id=25]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
@@ -217,49 +217,49 @@ extents = Vector2( 32, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=60]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -16, 32, -32, 32, -32, -32, -16, -32 )
+points = Vector2Array( -32, -32, 32, -32, 16, -24 )
 
 [sub_resource type="ConvexPolygonShape2D" id=61]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, -32, 32, 24, 16, 24, 16, -32 )
+points = Vector2Array( -32, 32, -32, -32, 16, -24, 16, -16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=62]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -16, 32, -32, 32, -32, -32, -16, -32 )
+points = Vector2Array( 24, 32, -32, 32, 16, -16, 24, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, 24, 32, 32, -16, 32, -16, 24 )
+points = Vector2Array( -16, -24, -32, -32, 32, -32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=64]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, 16, 32, 24, -32, 24, -32, 16 )
+points = Vector2Array( -16, -24, 32, -32, 32, 32, -16, -16 )
 
-[sub_resource type="RectangleShape2D" id=65]
+[sub_resource type="ConvexPolygonShape2D" id=65]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+points = Vector2Array( -16, -16, 32, 32, -24, 32, -24, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=79]
+[sub_resource type="ConvexPolygonShape2D" id=32]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -8, -24, 32, -24, 32, 24, 0, 24, -32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=80]
+[sub_resource type="ConvexPolygonShape2D" id=33]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -32, 0, 0, 24, -8, 32, -24, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=81]
+[sub_resource type="ConvexPolygonShape2D" id=34]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -24, 16, -32, 16, -32, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=82]
+[sub_resource type="ConvexPolygonShape2D" id=35]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
@@ -296,7 +296,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 2/occluder_offset = Vector2( 32, 32 )
 2/navigation_offset = Vector2( 32, 32 )
 2/shape_offset = Vector2( 32, 32 )
-2/shapes = [ SubResource( 68 ) ]
+2/shapes = [ SubResource( 3 ) ]
 2/one_way_collision_direction = Vector2( 0, 0 )
 2/one_way_collision_max_depth = 0.0
 3/name = "asphalt_puddle_center"
@@ -307,7 +307,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 3/occluder_offset = Vector2( 32, 32 )
 3/navigation_offset = Vector2( 32, 32 )
 3/shape_offset = Vector2( 32, 32 )
-3/shapes = [ SubResource( 74 ) ]
+3/shapes = [ SubResource( 4 ) ]
 3/one_way_collision_direction = Vector2( 0, 0 )
 3/one_way_collision_max_depth = 0.0
 4/name = "asphalt_puddle_right"
@@ -318,7 +318,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 4/occluder_offset = Vector2( 32, 32 )
 4/navigation_offset = Vector2( 32, 32 )
 4/shape_offset = Vector2( 32, 32 )
-4/shapes = [ SubResource( 77 ) ]
+4/shapes = [ SubResource( 5 ) ]
 4/one_way_collision_direction = Vector2( 0, 0 )
 4/one_way_collision_max_depth = 0.0
 5/name = "asphalt_cola_can"
@@ -329,7 +329,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 5/occluder_offset = Vector2( 32, 32 )
 5/navigation_offset = Vector2( 32, 32 )
 5/shape_offset = Vector2( 32, 32 )
-5/shapes = [ SubResource( 77 ) ]
+5/shapes = [ SubResource( 5 ) ]
 5/one_way_collision_direction = Vector2( 0, 0 )
 5/one_way_collision_max_depth = 0.0
 6/name = "asphalt_hole_left"
@@ -373,7 +373,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 9/occluder_offset = Vector2( 32, 32 )
 9/navigation_offset = Vector2( 32, 32 )
 9/shape_offset = Vector2( 32, 32 )
-9/shapes = [ SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ) ]
+9/shapes = [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ]
 9/one_way_collision_direction = Vector2( 0, 0 )
 9/one_way_collision_max_depth = 0.0
 10/name = "white_car_front"
@@ -571,7 +571,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 27/occluder_offset = Vector2( 32, 32 )
 27/navigation_offset = Vector2( 32, 32 )
 27/shape_offset = Vector2( 32, 32 )
-27/shapes = [ SubResource( 69 ), SubResource( 70 ) ]
+27/shapes = [ SubResource( 19 ), SubResource( 20 ) ]
 27/one_way_collision_direction = Vector2( 0, 0 )
 27/one_way_collision_max_depth = 0.0
 28/name = "manhole_base"
@@ -582,7 +582,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 28/occluder_offset = Vector2( 32, 32 )
 28/navigation_offset = Vector2( 32, 32 )
 28/shape_offset = Vector2( 32, 32 )
-28/shapes = [ SubResource( 71 ), SubResource( 72 ) ]
+28/shapes = [ SubResource( 21 ), SubResource( 22 ) ]
 28/one_way_collision_direction = Vector2( 0, 0 )
 28/one_way_collision_max_depth = 0.0
 29/name = "manhole_ceiling"
@@ -593,7 +593,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 29/occluder_offset = Vector2( 32, 32 )
 29/navigation_offset = Vector2( 32, 32 )
 29/shape_offset = Vector2( 32, 32 )
-29/shapes = [ SubResource( 73 ) ]
+29/shapes = [ SubResource( 23 ) ]
 29/one_way_collision_direction = Vector2( 0, 0 )
 29/one_way_collision_max_depth = 0.0
 30/name = "manhole_floor"
@@ -604,7 +604,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 30/occluder_offset = Vector2( 32, 32 )
 30/navigation_offset = Vector2( 32, 32 )
 30/shape_offset = Vector2( 32, 32 )
-30/shapes = [ SubResource( 75 ) ]
+30/shapes = [ SubResource( 24 ) ]
 30/one_way_collision_direction = Vector2( 0, 0 )
 30/one_way_collision_max_depth = 0.0
 31/name = "manhole_pipe"
@@ -615,7 +615,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 31/occluder_offset = Vector2( 32, 32 )
 31/navigation_offset = Vector2( 32, 32 )
 31/shape_offset = Vector2( 32, 32 )
-31/shapes = [ SubResource( 75 ) ]
+31/shapes = [ SubResource( 24 ) ]
 31/one_way_collision_direction = Vector2( 0, 0 )
 31/one_way_collision_max_depth = 0.0
 32/name = "gate_top"
@@ -626,7 +626,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 32/occluder_offset = Vector2( 32, 32 )
 32/navigation_offset = Vector2( 32, 32 )
 32/shape_offset = Vector2( 32, 32 )
-32/shapes = [ SubResource( 58 ) ]
+32/shapes = [ SubResource( 68 ) ]
 32/one_way_collision_direction = Vector2( 0, 0 )
 32/one_way_collision_max_depth = 0.0
 33/name = "gate_middle"
@@ -637,7 +637,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 33/occluder_offset = Vector2( 32, 32 )
 33/navigation_offset = Vector2( 32, 32 )
 33/shape_offset = Vector2( 32, 32 )
-33/shapes = [ SubResource( 76 ) ]
+33/shapes = [ SubResource( 59 ) ]
 33/one_way_collision_direction = Vector2( 0, 0 )
 33/one_way_collision_max_depth = 0.0
 34/name = "gate_bottom"
@@ -736,7 +736,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 42/occluder_offset = Vector2( 32, 32 )
 42/navigation_offset = Vector2( 32, 32 )
 42/shape_offset = Vector2( 32, 32 )
-42/shapes = [ SubResource( 78 ) ]
+42/shapes = [ SubResource( 25 ) ]
 42/one_way_collision_direction = Vector2( 0, 0 )
 42/one_way_collision_max_depth = 0.0
 
