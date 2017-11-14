@@ -15,7 +15,6 @@
 [ext_resource path="res://game/scenes/common/FadeScene/Fade.tscn" type="PackedScene" id=13]
 [ext_resource path="res://game/scenes/common/DialogBox/DialogBox.tscn" type="PackedScene" id=14]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -258,14 +257,14 @@ max_lines_visible = -1
 
 [node name="DialogBox" parent="." instance=ExtResource( 14 )]
 
-transform/pos = Vector2( 1825.01, 345.801 )
-transform/scale = Vector2( 4.85893, 0.748678 )
+transform/pos = Vector2( 1810.28, 382.036 )
+transform/scale = Vector2( 4.85893, 2.26364 )
 
 [connection signal="DreamLordSpeaking" from="DreamLordTrigger" to="StreamPlayer" method="_on_DreamLordTrigger_DreamLordSpeaking"]
 
-[connection signal="body_enter" from="DreamLordTrigger" to="DreamLordTrigger" method="_on_Area2D_body_enter"]
-
 [connection signal="body_enter" from="DreamLordTrigger" to="DialogBox" method="_on_DreamLordTrigger_body_enter"]
+
+[connection signal="body_enter" from="DreamLordTrigger" to="DreamLordTrigger" method="_on_Area2D_body_enter"]
 
 [connection signal="low_awareness" from="AwarenessBar" to="Player" method="_on_AwarenessBar_low_awareness"]
 
