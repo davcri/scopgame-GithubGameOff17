@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://game/scenes/walk_jump/World_collectible.gd" type="Script" id=1]
 [ext_resource path="res://game/scenes/walk_jump/AreaDetection.gd" type="Script" id=2]
@@ -8,13 +8,12 @@
 [ext_resource path="res://game/scenes/walk_jump/Player.gd" type="Script" id=6]
 [ext_resource path="res://game/scenes/walk_jump/assets/Arthur_Dent.png" type="Texture" id=7]
 [ext_resource path="res://game/scenes/walk_jump/PlayerCamera.gd" type="Script" id=8]
-[ext_resource path="res://game/scenes/walk_jump/tileset.tres" type="TileSet" id=9]
-[ext_resource path="res://game/scenes/common/Collectible/collectible.tscn" type="PackedScene" id=10]
-[ext_resource path="res://game/scenes/walk_jump/assets/soudtracks/future_city_theme.ogg" type="AudioStream" id=11]
-[ext_resource path="res://game/scenes/walk_jump/StreamPlayer.gd" type="Script" id=12]
-[ext_resource path="res://game/scenes/common/AwarenessBar/AwarenessBar.tscn" type="PackedScene" id=13]
-[ext_resource path="res://game/scenes/common/FadeScene/Fade.tscn" type="PackedScene" id=14]
-[ext_resource path="res://game/scenes/common/DialogBox/DialogBox.tscn" type="PackedScene" id=15]
+[ext_resource path="res://game/scenes/common/Collectible/collectible.tscn" type="PackedScene" id=9]
+[ext_resource path="res://game/scenes/walk_jump/assets/soudtracks/future_city_theme.ogg" type="AudioStream" id=10]
+[ext_resource path="res://game/scenes/walk_jump/StreamPlayer.gd" type="Script" id=11]
+[ext_resource path="res://game/scenes/common/AwarenessBar/AwarenessBar.tscn" type="PackedScene" id=12]
+[ext_resource path="res://game/scenes/common/FadeScene/Fade.tscn" type="PackedScene" id=13]
+[ext_resource path="res://game/scenes/common/DialogBox/DialogBox.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -32,6 +31,7 @@ script/script = ExtResource( 1 )
 
 [node name="DreamLordTrigger" type="Area2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 1600, 384 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
@@ -97,7 +97,7 @@ collision/bounce = 0.0
 collision/layers = 1
 collision/mask = 1
 occluder/light_mask = 1
-tile_data = IntArray( 131083, 0, 131084, 0, 262153, 0, 262164, 0, 327688, 0, 327689, 0, 327690, 0, 327699, 0, 327700, 0, 327701, 0, 458741, 0, 458742, 0, 393223, 0, 393224, 0, 393225, 0, 393226, 0, 393227, 11, 393228, 12, 393234, 0, 393235, 0, 393236, 0, 393237, 0, 393238, 0, 393253, 9, 393254, 10, 524276, 0, 524277, 0, 524278, 0, 524279, 0, 524280, 0, 524281, 0, 524282, 2, 524283, 3, 524284, 4, 524285, 5, 524286, 6, 524287, 7, 458752, 8, 458753, 0, 458754, 1, 458755, 0, 458756, 0, 458757, 0, 458758, 0, 458759, 0, 458760, 0, 458761, 0, 458762, 0, 458763, 0, 458764, 0, 458765, 0, 458766, 0, 458767, 0, 458768, 0, 458769, 1, 458770, 0, 458771, 0, 458772, 0, 458773, 0, 458774, 5, 458775, 0, 458776, 0, 458777, 2, 458778, 3, 458779, 3, 458780, 4, 458781, 0, 458782, 0, 458783, 0, 458784, 6, 458785, 7, 458786, 8, 458787, 0, 458788, 0, 458789, 1, 458790, 0, 458791, 0 )
+tile_data = IntArray( 327676, 39, 262188, 38, 393197, 32, 393212, 40, 327721, 35, 327724, 40, 327727, 32, 458733, 33, 458744, 20, 458748, 41, 393218, 21, 393228, 19, 393249, 9, 393250, 10, 393253, 11, 393254, 12, 393257, 36, 393260, 41, 393263, 33, 524269, 34, 524270, 0, 524271, 0, 524272, 0, 524273, 0, 524274, 2, 524275, 4, 524276, 0, 524277, 0, 524278, 0, 524279, 0, 524280, 18, 524281, 0, 524282, 0, 524283, 0, 524284, 42, 524285, 0, 524286, 0, 524287, 0, 458752, 0, 458753, 0, 458754, 22, 458755, 0, 458756, 0, 458757, 0, 458758, 0, 458759, 0, 458760, 1, 458761, 0, 458762, 0, 458763, 0, 458764, 18, 458765, 0, 458766, 0, 458767, 0, 458768, 6, 458769, 7, 458770, 8, 458771, 0, 458772, 0, 458773, 0, 458774, 26, 458775, 0, 458776, 0, 458777, 0, 458778, 0, 458779, 0, 458780, 1, 458781, 2, 458782, 3, 458783, 4, 458784, 0, 458785, 0, 458786, 0, 458787, 0, 458788, 0, 458789, 0, 458790, 5, 458791, 0, 458792, 0, 458793, 37, 458794, 0, 458795, 0, 458796, 42, 458797, 0, 458798, 0, 458799, 34, 589823, 13, 524288, 13, 524289, 13, 524290, 13, 524291, 13, 524292, 13, 524293, 13, 524294, 13, 524295, 13, 524296, 13, 524297, 13, 524298, 13, 524299, 13, 524300, 13, 524301, 13, 524302, 13, 524303, 13, 524304, 23, 524305, 24, 524306, 25, 524307, 13, 524308, 13, 524309, 13, 524310, 27, 524311, 29, 524312, 29, 524313, 29, 524314, 29, 524315, 13, 524316, 13, 524317, 13, 589840, 23, 589841, 24, 589842, 25, 589846, 28, 589847, 30, 589848, 30, 589849, 31, 589850, 30, 589851, 13, 589852, 13, 589853, 13, 655376, 23, 655377, 24, 655378, 25, 720912, 23, 720913, 24, 720914, 25, 786448, 23, 786449, 24, 786450, 25, 851984, 23, 851985, 24, 851986, 25, 917520, 23, 917521, 24, 917522, 25, 983056, 23, 983057, 24, 983058, 25 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
 
@@ -156,7 +156,7 @@ __meta__ = {
 [node name="foreground" type="TileMap" parent="."]
 
 mode = 0
-tile_set = ExtResource( 9 )
+tile_set = null
 cell/size = Vector2( 64, 64 )
 cell/quadrant_size = 16
 cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
@@ -179,31 +179,31 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="collectible" parent="Collectibles" instance=ExtResource( 10 )]
+[node name="collectible" parent="Collectibles" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( -0.783936, 0.999969 )
 
-[node name="collectible2" parent="Collectibles" instance=ExtResource( 10 )]
+[node name="collectible2" parent="Collectibles" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 271.216, 119 )
 transform/scale = Vector2( 0.9, 0.9 )
 value = 5
 
-[node name="collectible1" parent="Collectibles" instance=ExtResource( 10 )]
+[node name="collectible1" parent="Collectibles" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( -286.784, -6.00003 )
 
-[node name="collectible4" parent="Collectibles" instance=ExtResource( 10 )]
+[node name="collectible4" parent="Collectibles" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 1344.22, 265 )
 
-[node name="collectible3" parent="Collectibles" instance=ExtResource( 10 )]
+[node name="collectible3" parent="Collectibles" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( -1521.78, 227 )
 
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
-stream/stream = ExtResource( 11 )
+stream/stream = ExtResource( 10 )
 stream/play = false
 stream/loop = true
 stream/volume_db = 0.0
@@ -211,12 +211,17 @@ stream/autoplay = false
 stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
-script/script = ExtResource( 12 )
+script/script = ExtResource( 11 )
 
-[node name="AwarenessBar" parent="." instance=ExtResource( 13 )]
 [node name="Tween" type="Tween" parent="StreamPlayer"]
 
 editor/display_folded = true
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="AwarenessBar" parent="." instance=ExtResource( 12 )]
 
 [node name="Collectibles_Collected" type="Label" parent="AwarenessBar"]
 
@@ -248,9 +253,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Fade" parent="." instance=ExtResource( 14 )]
+[node name="Fade" parent="." instance=ExtResource( 13 )]
 
-[node name="RichTextLabel" parent="." instance=ExtResource( 15 )]
+[node name="RichTextLabel" parent="." instance=ExtResource( 14 )]
 
 margin/left = 1885.0
 margin/top = 326.0
@@ -259,9 +264,9 @@ margin/bottom = 361.0
 
 [connection signal="DreamLordSpeaking" from="DreamLordTrigger" to="StreamPlayer" method="_on_DreamLordTrigger_DreamLordSpeaking"]
 
-[connection signal="body_enter" from="DreamLordTrigger" to="DreamLordTrigger" method="_on_Area2D_body_enter"]
-
 [connection signal="body_enter" from="DreamLordTrigger" to="RichTextLabel" method="_on_DreamLordTrigger_body_enter" flags=3]
+
+[connection signal="body_enter" from="DreamLordTrigger" to="DreamLordTrigger" method="_on_Area2D_body_enter"]
 
 [connection signal="low_awareness" from="AwarenessBar" to="Player" method="_on_AwarenessBar_low_awareness"]
 
