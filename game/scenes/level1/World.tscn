@@ -1,15 +1,15 @@
 [gd_scene load_steps=13 format=1]
 
-[ext_resource path="res://game/scenes/walk_jump/World_collectible.gd" type="Script" id=1]
-[ext_resource path="res://game/scenes/walk_jump/assets/tileset/asphalt_tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://game/scenes/level1/World_collectible.gd" type="Script" id=1]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://game/scenes/common/Collectible/collectible.tscn" type="PackedScene" id=3]
-[ext_resource path="res://game/scenes/walk_jump/AreaDetection.gd" type="Script" id=4]
+[ext_resource path="res://game/scenes/level1/AreaDetection.gd" type="Script" id=4]
 [ext_resource path="res://game/scenes/common/DialogBox/DialogBox.tscn" type="PackedScene" id=5]
-[ext_resource path="res://game/scenes/walk_jump/assets/dreamlord.png" type="Texture" id=6]
-[ext_resource path="res://game/scenes/walk_jump/assets/soudtracks/dreamlord_message1.ogg" type="AudioStream" id=7]
+[ext_resource path="res://game/scenes/level1/assets/dreamlord.png" type="Texture" id=6]
+[ext_resource path="res://game/scenes/level1/assets/soudtracks/dreamlord_message1.ogg" type="AudioStream" id=7]
 [ext_resource path="res://game/scenes/common/Player/Player.tscn" type="PackedScene" id=8]
-[ext_resource path="res://game/scenes/walk_jump/assets/soudtracks/future_city_theme.ogg" type="AudioStream" id=9]
-[ext_resource path="res://game/scenes/walk_jump/StreamPlayer.gd" type="Script" id=10]
+[ext_resource path="res://game/scenes/level1/assets/soudtracks/future_city_theme.ogg" type="AudioStream" id=9]
+[ext_resource path="res://game/scenes/level1/StreamPlayer.gd" type="Script" id=10]
 [ext_resource path="res://game/scenes/common/FadeScene/Fade.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -23,7 +23,6 @@ script/script = ExtResource( 1 )
 
 [node name="TileMapBackground" type="TileMap" parent="."]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 2 )
 cell/size = Vector2( 64, 64 )
@@ -42,7 +41,6 @@ tile_data = IntArray( 327676, 39, 262188, 38, 393197, 32, 393212, 40, 327721, 35
 
 [node name="Collectibles" type="Node2D" parent="TileMapBackground"]
 
-editor/display_folded = true
 transform/pos = Vector2( 891, 38 )
 __meta__ = {
 "_edit_lock_": true
@@ -72,14 +70,12 @@ transform/pos = Vector2( -1521.78, 227 )
 
 [node name="TriggersDL" type="Node2D" parent="TileMapBackground"]
 
-editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="DreamLordTrigger" type="Area2D" parent="TileMapBackground/TriggersDL"]
 
-editor/display_folded = true
 transform/pos = Vector2( 1600, 384 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
