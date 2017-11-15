@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://game/scenes/common/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://game/scenes/common/Player/Arthur_Dent.png" type="Texture" id=2]
+[ext_resource path="res://game/scenes/common/AwarenessBar/AwarenessBar.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 9.83252, 31.872 )
+
+[sub_resource type="GDScript" id=2]
+
+script/source = "extends Camera2D
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	pass
+"
+
+[node name="Player" type="KinematicBody2D"]
+
+transform/pos = Vector2( 486, 266 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AwarenessBar" parent="." instance=ExtResource( 3 )]
+
+

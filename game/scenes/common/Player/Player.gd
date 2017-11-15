@@ -45,6 +45,7 @@ func _ready():
 	# va inserito il path, essendo child diretto basta "Sprite"
 	sprite_node = get_node("Sprite")
 	jump_pos = get_pos()
+	print("PLAYUER")
 
 
 func _input(event):
@@ -119,7 +120,7 @@ func _fixed_process(delta):
 	
 	if is_falled():
 		set_pos(jump_pos)
-		var awareness_bar = get_node("../AwarenessBar")
+		var awareness_bar = get_node("AwarenessBar")
 		awareness_bar.decrease(FALL_DAMAGE)
 
 
