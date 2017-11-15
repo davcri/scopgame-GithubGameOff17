@@ -236,7 +236,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Fade" parent="." instance=ExtResource( 13 )]
+[node name="FadeInEffect" parent="." instance=ExtResource( 13 )]
 
 [node name="RichTextLabel" parent="." instance=ExtResource( 14 )]
 
