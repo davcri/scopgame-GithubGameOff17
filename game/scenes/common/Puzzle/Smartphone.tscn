@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://game/scenes/common/Puzzle/Smartphone.gd" type="Script" id=1]
 [ext_resource path="res://game/scenes/common/Puzzle/smarphone.png" type="Texture" id=2]
-
+[ext_resource path="res://Lock.gd" type="Script" id=3]
+[ext_resource path="res://game/scenes/common/Puzzle/smartphone-lock.tex" type="Texture" id=4]
+[ext_resource path="res://game/scenes/common/Puzzle/phone-lock-little.tex" type="Texture" id=5]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -12,26 +14,63 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 script/script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Smartphone" type="Sprite" parent="."]
 
-transform/pos = Vector2( 261, -102 )
+transform/pos = Vector2( 0, -103 )
+transform/scale = Vector2( 1.1, 1 )
 texture = ExtResource( 2 )
 centered = false
+modulate = Color( 0.114838, 0.216404, 0.277344, 1 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Smartphone"]
 
+rect/scale = Vector2( 1.4, 1.4 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 492.0
-margin/top = 128.0
-margin/right = 536.0
-margin/bottom = 142.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "PROVA"
+margin/left = 185.0
+margin/top = 214.0
+margin/right = 295.0
+margin/bottom = 228.0
+custom_colors/font_color = Color( 0.542969, 1, 0.61438, 1 )
+text = "Unlock sequence"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="LockNodes" type="GridContainer" parent="Smartphone"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 153.0
+margin/top = 309.0
+margin/right = 409.0
+margin/bottom = 565.0
+custom_constants/vseparation = 50
+custom_constants/hseparation = 12
+columns = 3
+script/script = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="Smartphone/LockNodes"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 64.0
+margin/bottom = 64.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+textures/pressed = ExtResource( 5 )
+params/resize_mode = 0
+params/stretch_mode = 0
 
 
