@@ -36,4 +36,33 @@ texture/progress = ExtResource( 3 )
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
 
+[node name="Collectibles_Collected" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 36.0
+margin/top = 61.0
+margin/right = 164.0
+margin/bottom = 88.0
+text = "Scoppol Taken : "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Collectibles_Total" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 32.0
+margin/top = 96.0
+margin/right = 72.0
+margin/bottom = 110.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 
