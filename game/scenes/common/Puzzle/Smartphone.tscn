@@ -73,4 +73,11 @@ textures/pressed = ExtResource( 5 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
+[node name="Tween" type="Tween" parent="Smartphone/LockNodes"]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
 
