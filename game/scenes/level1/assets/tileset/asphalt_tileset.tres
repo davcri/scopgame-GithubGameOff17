@@ -1,56 +1,61 @@
-[gd_resource type="TileSet" load_steps=100 format=1]
+[gd_resource type="TileSet" load_steps=108 format=1]
 
 [ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/asphalt.png" type="Texture" id=1]
 [ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/asphalt_normal_manhole.png" type="Texture" id=2]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/cars/car_white_right.png" type="Texture" id=3]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/cars/car_red_left.png" type="Texture" id=4]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/cars/car_red_right.png" type="Texture" id=5]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/dirt.png" type="Texture" id=6]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/slopes/asphalt_normal_asc.png" type="Texture" id=7]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/slopes/asphalt_normal_desc.png" type="Texture" id=8]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/slopes/asphalt_corner_upper_left.png" type="Texture" id=9]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/slopes/asphalt_corner_upper_right.png" type="Texture" id=10]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/trashcan/asphalt_trashcan_base.png" type="Texture" id=11]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/trashcan/fired_up_trashcan.png" type="Texture" id=12]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/dirt_hole_center_left.png" type="Texture" id=3]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/dirt_hole_center_right.png" type="Texture" id=4]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/dirt_hole_right.png" type="Texture" id=5]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/asphalt_hole_right.png" type="Texture" id=6]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/cars/car_white_left.png" type="Texture" id=7]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/cars/car_white_right.png" type="Texture" id=8]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/cars/car_red_left.png" type="Texture" id=9]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/cars/car_red_right.png" type="Texture" id=10]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/dirt.png" type="Texture" id=11]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/slopes/asphalt_normal_asc.png" type="Texture" id=12]
 [ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/puddle/asphalt_normal_puddle_left.png" type="Texture" id=13]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/trashcan/normal_trashcan.png" type="Texture" id=14]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/dumpster/dumpster_top.png" type="Texture" id=15]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/dumpster/dumpster_base.png" type="Texture" id=16]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/dirt_hole_left.png" type="Texture" id=17]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/dirt_hole_center.png" type="Texture" id=18]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/dirt_hole_right.png" type="Texture" id=19]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/asphalt_opened_manhole.png" type="Texture" id=20]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/manhole_middle.png" type="Texture" id=21]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/manhole_bottom.png" type="Texture" id=22]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_ceiling.png" type="Texture" id=23]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/slopes/asphalt_normal_desc.png" type="Texture" id=14]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/slopes/asphalt_corner_upper_left.png" type="Texture" id=15]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/slopes/asphalt_corner_upper_right.png" type="Texture" id=16]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/trashcan/fired_up_trashcan.png" type="Texture" id=17]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/trashcan/normal_trashcan.png" type="Texture" id=18]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/trashcan/asphalt_trashcan_base_fg.png" type="Texture" id=19]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/trashcan/asphalt_trashcan_base_bg.png" type="Texture" id=20]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/asphalt_opened_manhole_foreground.png" type="Texture" id=21]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/dumpster/dumpster_top.png" type="Texture" id=22]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/dumpster/dumpster_base.png" type="Texture" id=23]
 [ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/puddle/asphalt_normal_puddle_center.png" type="Texture" id=24]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_floor.png" type="Texture" id=25]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_pipe.png" type="Texture" id=26]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_ceiling_end.png" type="Texture" id=27]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_end.png" type="Texture" id=28]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_top_left.png" type="Texture" id=29]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_top_right.png" type="Texture" id=30]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_middle_left.png" type="Texture" id=31]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_middle_right.png" type="Texture" id=32]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_base_left.png" type="Texture" id=33]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_base_right.png" type="Texture" id=34]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/dumpster/dumpster_base_bg.png" type="Texture" id=25]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/asphalt_opened_manhole.png" type="Texture" id=26]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/manhole_middle.png" type="Texture" id=27]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/manhole_bottom.png" type="Texture" id=28]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_ceiling.png" type="Texture" id=29]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_floor.png" type="Texture" id=30]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_pipe.png" type="Texture" id=31]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_ceiling_end.png" type="Texture" id=32]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/manhole/dungeon_end.png" type="Texture" id=33]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_top_left.png" type="Texture" id=34]
 [ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/puddle/asphalt_normal_puddle_right.png" type="Texture" id=35]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_top_open_left.png" type="Texture" id=36]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_top_open_right.png" type="Texture" id=37]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_middle_open_left.png" type="Texture" id=38]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_middle_open_right.png" type="Texture" id=39]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_base_open_left.png" type="Texture" id=40]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_base_open_right.png" type="Texture" id=41]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_up_left.png" type="Texture" id=42]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_up_right.png" type="Texture" id=43]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_body_up.png" type="Texture" id=44]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_body_bottom.png" type="Texture" id=45]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_top_right.png" type="Texture" id=36]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_middle_left.png" type="Texture" id=37]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_middle_right.png" type="Texture" id=38]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_base_left.png" type="Texture" id=39]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_base_right.png" type="Texture" id=40]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_top_open_left.png" type="Texture" id=41]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_top_open_right.png" type="Texture" id=42]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_middle_open_left.png" type="Texture" id=43]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_middle_open_right.png" type="Texture" id=44]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_base_open_left.png" type="Texture" id=45]
 [ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/asphalt_deco/asphalt_normal_cola_can.png" type="Texture" id=46]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_base.png" type="Texture" id=47]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/asphalt_hole_left.png" type="Texture" id=48]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/asphalt_hole_centre.png" type="Texture" id=49]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/asphalt_hole_right.png" type="Texture" id=50]
-[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/cars/car_white_left.png" type="Texture" id=51]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/gate/gate_base_open_right.png" type="Texture" id=47]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_up_left.png" type="Texture" id=48]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_up_right.png" type="Texture" id=49]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_body_up.png" type="Texture" id=50]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_body_bottom.png" type="Texture" id=51]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/street_lamp/street_lamp_base.png" type="Texture" id=52]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/asphalt_hole_left.png" type="Texture" id=53]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/asphalt_hole_centre_left.png" type="Texture" id=54]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/asphalt_hole_centre_right.png" type="Texture" id=55]
+[ext_resource path="res://game/scenes/level1/assets/tileset/asphalt/hole/dirt_hole_left.png" type="Texture" id=56]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -61,6 +66,46 @@ extents = Vector2( 32, 32 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 32, -32, 32, 32, -24, 32, -24, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -16, -24, -32, -32, 32, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -16, -24, 32, -32, 32, 32, -16, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -16, -16, 32, 32, -24, 32, -24, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -8, -24, 32, -24, 32, 24, 0, 24, -32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -32, 0, 0, 24, -8, 32, -24, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -24, 16, -32, 16, -32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 
@@ -117,6 +162,11 @@ points = Vector2Array( 16, 24, 32, 0, 32, 16 )
 custom_solver_bias = 0.0
 points = Vector2Array( 32, 32, -32, 32, 32, -32 )
 
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
 [sub_resource type="ConvexPolygonShape2D" id=27]
 
 custom_solver_bias = 0.0
@@ -127,20 +177,20 @@ points = Vector2Array( 32, 32, -32, 32, -32, -32 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=50]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 24, 32, -32, 32, -32, -32, 24, -32 )
+extents = Vector2( 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=30]
+[sub_resource type="RectangleShape2D" id=51]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, -32, 32, 32, -24, 32, -24, -32 )
+extents = Vector2( 32, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=31]
 
@@ -177,11 +227,6 @@ points = Vector2Array( 32, 24, 32, 32, -16, 32, -16, 24 )
 custom_solver_bias = 0.0
 points = Vector2Array( 32, -32, 32, 24, -32, 24, -32, -32 )
 
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
-
 [sub_resource type="ConvexPolygonShape2D" id=38]
 
 custom_solver_bias = 0.0
@@ -197,47 +242,52 @@ points = Vector2Array( 32, 16, 32, 32, 24, 32, 24, 24 )
 custom_solver_bias = 0.0
 points = Vector2Array( -32, 16, 32, 16, 24, 24, -32, 24 )
 
-[sub_resource type="ConvexPolygonShape2D" id=45]
+[sub_resource type="ConvexPolygonShape2D" id=41]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32, 32, -32, 32, -32, 24, 24, 24 )
 
-[sub_resource type="ConvexPolygonShape2D" id=46]
+[sub_resource type="ConvexPolygonShape2D" id=42]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32, -32, 32, 32, 24, 24, 24, -32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=47]
+[sub_resource type="ConvexPolygonShape2D" id=43]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, -24, 32, 32, 7.99997, 32, 7.99997, -32 )
+points = Vector2Array( 0, 32, 0, -32, 8, -32, 16, -24, 32, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=48]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -16, -16, -16, 32, -40, 32, -40, -24 )
-
-[sub_resource type="ConvexPolygonShape2D" id=49]
+[sub_resource type="ConvexPolygonShape2D" id=44]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, -32, 32, 32, 7.99997, 32, 7.99997, -32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=50]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -8, -32, -8, 32, -32, 32, -32, -32 )
-
-[sub_resource type="RectangleShape2D" id=43]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+points = Vector2Array( 32, 32, 16, -24, 32, -16 )
 
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=44]
+[sub_resource type="ConvexPolygonShape2D" id=45]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -24, -16, -24, 32, -40, 32, -40, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=46]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 32, -32, 32, 32, 0, 32, 0, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=47]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -16, -32, -16, 32, -32, 32, -32, -32 )
+
+[sub_resource type="RectangleShape2D" id=48]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=49]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
@@ -257,40 +307,10 @@ points = Vector2Array( -32, 32, -32, -32, 16, -24, 16, -16 )
 custom_solver_bias = 0.0
 points = Vector2Array( 24, 32, -32, 32, 16, -16, 24, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=29]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -16, -24, -32, -32, 32, -32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=10]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -16, -24, 32, -32, 32, 32, -16, -16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=11]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -16, -16, 32, 32, -24, 32, -24, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=12]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -8, -24, 32, -24, 32, 24, 0, 24, -32, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=13]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -32, 0, 0, 24, -8, 32, -24, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=14]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -24, 16, -32, 16, -32, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=15]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
+points = Vector2Array( 24, 32, -32, 32, -32, -32, 24, -32 )
 
 [resource]
 
@@ -361,7 +381,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 5/one_way_collision_direction = Vector2( 0, 0 )
 5/one_way_collision_max_depth = 0.0
 6/name = "asphalt_hole_left"
-6/texture = ExtResource( 48 )
+6/texture = ExtResource( 53 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 64, 64 )
@@ -371,8 +391,8 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 6/shapes = [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ]
 6/one_way_collision_direction = Vector2( 0, 0 )
 6/one_way_collision_max_depth = 0.0
-7/name = "asphalt_hole_center"
-7/texture = ExtResource( 49 )
+7/name = "asphalt_hole_center_left"
+7/texture = ExtResource( 54 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 64, 64 )
@@ -382,51 +402,51 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 7/shapes = [  ]
 7/one_way_collision_direction = Vector2( 0, 0 )
 7/one_way_collision_max_depth = 0.0
-8/name = "asphalt_hole_right"
-8/texture = ExtResource( 50 )
+8/name = "asphalt_hole_center_right"
+8/texture = ExtResource( 55 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 64, 64 )
 8/occluder_offset = Vector2( 32, 32 )
 8/navigation_offset = Vector2( 32, 32 )
-8/shape_offset = Vector2( 32, 32 )
-8/shapes = [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ]
+8/shape_offset = Vector2( 0, 0 )
+8/shapes = [  ]
 8/one_way_collision_direction = Vector2( 0, 0 )
 8/one_way_collision_max_depth = 0.0
-9/name = "white_car_back"
-9/texture = ExtResource( 51 )
+9/name = "dirt_hole_left"
+9/texture = ExtResource( 56 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 64, 64 )
 9/occluder_offset = Vector2( 32, 32 )
 9/navigation_offset = Vector2( 32, 32 )
 9/shape_offset = Vector2( 32, 32 )
-9/shapes = [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ]
+9/shapes = [ SubResource( 29 ) ]
 9/one_way_collision_direction = Vector2( 0, 0 )
 9/one_way_collision_max_depth = 0.0
-10/name = "white_car_front"
+10/name = "dirt_hole_centre_left"
 10/texture = ExtResource( 3 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 64, 64 )
 10/occluder_offset = Vector2( 32, 32 )
 10/navigation_offset = Vector2( 32, 32 )
-10/shape_offset = Vector2( 32, 32 )
-10/shapes = [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ]
+10/shape_offset = Vector2( 0, 0 )
+10/shapes = [  ]
 10/one_way_collision_direction = Vector2( 0, 0 )
 10/one_way_collision_max_depth = 0.0
-11/name = "red_car_back"
+11/name = "dirt_hole_centre_right"
 11/texture = ExtResource( 4 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 0, 64, 64 )
 11/occluder_offset = Vector2( 32, 32 )
 11/navigation_offset = Vector2( 32, 32 )
-11/shape_offset = Vector2( 32, 32 )
-11/shapes = [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ]
+11/shape_offset = Vector2( 0, 0 )
+11/shapes = [  ]
 11/one_way_collision_direction = Vector2( 0, 0 )
 11/one_way_collision_max_depth = 0.0
-12/name = "red_car_front"
+12/name = "dirt_hole_right"
 12/texture = ExtResource( 5 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
@@ -434,10 +454,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 12/occluder_offset = Vector2( 32, 32 )
 12/navigation_offset = Vector2( 32, 32 )
 12/shape_offset = Vector2( 32, 32 )
-12/shapes = [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ]
+12/shapes = [ SubResource( 30 ) ]
 12/one_way_collision_direction = Vector2( 0, 0 )
 12/one_way_collision_max_depth = 0.0
-13/name = "dirt"
+13/name = "asphalt_hole_right"
 13/texture = ExtResource( 6 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
@@ -445,10 +465,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 13/occluder_offset = Vector2( 32, 32 )
 13/navigation_offset = Vector2( 32, 32 )
 13/shape_offset = Vector2( 32, 32 )
-13/shapes = [ SubResource( 1 ) ]
+13/shapes = [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ]
 13/one_way_collision_direction = Vector2( 0, 0 )
 13/one_way_collision_max_depth = 0.0
-14/name = "asphalt_slope_right"
+14/name = "white_car_back"
 14/texture = ExtResource( 7 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
@@ -456,10 +476,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 14/occluder_offset = Vector2( 32, 32 )
 14/navigation_offset = Vector2( 32, 32 )
 14/shape_offset = Vector2( 32, 32 )
-14/shapes = [ SubResource( 26 ) ]
+14/shapes = [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ]
 14/one_way_collision_direction = Vector2( 0, 0 )
 14/one_way_collision_max_depth = 0.0
-15/name = "asphalt_slope_left"
+15/name = "white_car_front"
 15/texture = ExtResource( 8 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
@@ -467,10 +487,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 15/occluder_offset = Vector2( 32, 32 )
 15/navigation_offset = Vector2( 32, 32 )
 15/shape_offset = Vector2( 32, 32 )
-15/shapes = [ SubResource( 27 ) ]
+15/shapes = [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ]
 15/one_way_collision_direction = Vector2( 0, 0 )
 15/one_way_collision_max_depth = 0.0
-16/name = "asphalt_slope_corner_right"
+16/name = "red_car_back"
 16/texture = ExtResource( 9 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
@@ -478,10 +498,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 16/occluder_offset = Vector2( 32, 32 )
 16/navigation_offset = Vector2( 32, 32 )
 16/shape_offset = Vector2( 32, 32 )
-16/shapes = [ SubResource( 28 ) ]
+16/shapes = [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ]
 16/one_way_collision_direction = Vector2( 0, 0 )
 16/one_way_collision_max_depth = 0.0
-17/name = "asphalt_slope_corner_left"
+17/name = "red_car_front"
 17/texture = ExtResource( 10 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
@@ -489,76 +509,76 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 17/occluder_offset = Vector2( 32, 32 )
 17/navigation_offset = Vector2( 32, 32 )
 17/shape_offset = Vector2( 32, 32 )
-17/shapes = [ SubResource( 28 ) ]
+17/shapes = [ SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ]
 17/one_way_collision_direction = Vector2( 0, 0 )
 17/one_way_collision_max_depth = 0.0
-18/name = "trashcan_bottom"
+18/name = "dirt"
 18/texture = ExtResource( 11 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 0, 0, 64, 64 )
 18/occluder_offset = Vector2( 32, 32 )
 18/navigation_offset = Vector2( 32, 32 )
-18/shape_offset = Vector2( 0, 0 )
-18/shapes = [  ]
+18/shape_offset = Vector2( 32, 32 )
+18/shapes = [ SubResource( 1 ) ]
 18/one_way_collision_direction = Vector2( 0, 0 )
 18/one_way_collision_max_depth = 0.0
-19/name = "trashcan_burning"
+19/name = "asphalt_slope_right"
 19/texture = ExtResource( 12 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 0, 0, 64, 64 )
 19/occluder_offset = Vector2( 32, 32 )
 19/navigation_offset = Vector2( 32, 32 )
-19/shape_offset = Vector2( 0, 0 )
-19/shapes = [  ]
+19/shape_offset = Vector2( 32, 32 )
+19/shapes = [ SubResource( 26 ) ]
 19/one_way_collision_direction = Vector2( 0, 0 )
 19/one_way_collision_max_depth = 0.0
-20/name = "trashcan"
+20/name = "asphalt_slope_left"
 20/texture = ExtResource( 14 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 0, 64, 64 )
 20/occluder_offset = Vector2( 32, 32 )
 20/navigation_offset = Vector2( 32, 32 )
-20/shape_offset = Vector2( 0, 0 )
-20/shapes = [  ]
+20/shape_offset = Vector2( 32, 32 )
+20/shapes = [ SubResource( 27 ) ]
 20/one_way_collision_direction = Vector2( 0, 0 )
 20/one_way_collision_max_depth = 0.0
-21/name = "dumpster_top"
+21/name = "asphalt_slope_corner_right"
 21/texture = ExtResource( 15 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 0, 64, 64 )
 21/occluder_offset = Vector2( 32, 32 )
 21/navigation_offset = Vector2( 32, 32 )
-21/shape_offset = Vector2( 0, 0 )
-21/shapes = [  ]
+21/shape_offset = Vector2( 32, 32 )
+21/shapes = [ SubResource( 28 ) ]
 21/one_way_collision_direction = Vector2( 0, 0 )
 21/one_way_collision_max_depth = 0.0
-22/name = "dumpster_bottom"
+22/name = "asphalt_slope_corner_left"
 22/texture = ExtResource( 16 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 0, 0, 64, 64 )
 22/occluder_offset = Vector2( 32, 32 )
 22/navigation_offset = Vector2( 32, 32 )
-22/shape_offset = Vector2( 0, 0 )
-22/shapes = [  ]
+22/shape_offset = Vector2( 32, 32 )
+22/shapes = [ SubResource( 28 ) ]
 22/one_way_collision_direction = Vector2( 0, 0 )
 22/one_way_collision_max_depth = 0.0
-23/name = "dirt_hole_left"
+23/name = "trashcan_burning"
 23/texture = ExtResource( 17 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 0, 0, 64, 64 )
 23/occluder_offset = Vector2( 32, 32 )
 23/navigation_offset = Vector2( 32, 32 )
-23/shape_offset = Vector2( 32, 32 )
-23/shapes = [ SubResource( 29 ) ]
+23/shape_offset = Vector2( 0, 0 )
+23/shapes = [  ]
 23/one_way_collision_direction = Vector2( 0, 0 )
 23/one_way_collision_max_depth = 0.0
-24/name = "dirt_hole_centre"
+24/name = "trashcan"
 24/texture = ExtResource( 18 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
@@ -569,18 +589,18 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 24/shapes = [  ]
 24/one_way_collision_direction = Vector2( 0, 0 )
 24/one_way_collision_max_depth = 0.0
-25/name = "dirt_hole_right"
+25/name = "trashcan_bottom_fg"
 25/texture = ExtResource( 19 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 0, 0, 64, 64 )
 25/occluder_offset = Vector2( 32, 32 )
 25/navigation_offset = Vector2( 32, 32 )
-25/shape_offset = Vector2( 32, 32 )
-25/shapes = [ SubResource( 30 ) ]
+25/shape_offset = Vector2( 0, 0 )
+25/shapes = [  ]
 25/one_way_collision_direction = Vector2( 0, 0 )
 25/one_way_collision_max_depth = 0.0
-26/name = "manhole_open"
+26/name = "trashcan_bottom_bg"
 26/texture = ExtResource( 20 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
@@ -588,43 +608,43 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 26/occluder_offset = Vector2( 32, 32 )
 26/navigation_offset = Vector2( 32, 32 )
 26/shape_offset = Vector2( 32, 32 )
-26/shapes = [ SubResource( 31 ), SubResource( 32 ) ]
+26/shapes = [ SubResource( 50 ) ]
 26/one_way_collision_direction = Vector2( 0, 0 )
 26/one_way_collision_max_depth = 0.0
-27/name = "manhole_ladder"
+27/name = "manhole_foreground"
 27/texture = ExtResource( 21 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 0, 0, 64, 64 )
 27/occluder_offset = Vector2( 32, 32 )
 27/navigation_offset = Vector2( 32, 32 )
-27/shape_offset = Vector2( 32, 32 )
-27/shapes = [ SubResource( 33 ), SubResource( 34 ) ]
+27/shape_offset = Vector2( 0, 0 )
+27/shapes = [  ]
 27/one_way_collision_direction = Vector2( 0, 0 )
 27/one_way_collision_max_depth = 0.0
-28/name = "manhole_base"
+28/name = "dumpster_top"
 28/texture = ExtResource( 22 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 0, 0, 64, 64 )
 28/occluder_offset = Vector2( 32, 32 )
 28/navigation_offset = Vector2( 32, 32 )
-28/shape_offset = Vector2( 32, 32 )
-28/shapes = [ SubResource( 35 ), SubResource( 36 ) ]
+28/shape_offset = Vector2( 0, 0 )
+28/shapes = [  ]
 28/one_way_collision_direction = Vector2( 0, 0 )
 28/one_way_collision_max_depth = 0.0
-29/name = "manhole_ceiling"
+29/name = "dumpster_bottom_fg"
 29/texture = ExtResource( 23 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 0, 0, 64, 64 )
 29/occluder_offset = Vector2( 32, 32 )
 29/navigation_offset = Vector2( 32, 32 )
-29/shape_offset = Vector2( 32, 32 )
-29/shapes = [ SubResource( 37 ) ]
+29/shape_offset = Vector2( 0, 0 )
+29/shapes = [  ]
 29/one_way_collision_direction = Vector2( 0, 0 )
 29/one_way_collision_max_depth = 0.0
-30/name = "manhole_floor"
+30/name = "dumpster_bottom_bg"
 30/texture = ExtResource( 25 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
@@ -632,10 +652,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 30/occluder_offset = Vector2( 32, 32 )
 30/navigation_offset = Vector2( 32, 32 )
 30/shape_offset = Vector2( 32, 32 )
-30/shapes = [ SubResource( 38 ) ]
+30/shapes = [ SubResource( 51 ) ]
 30/one_way_collision_direction = Vector2( 0, 0 )
 30/one_way_collision_max_depth = 0.0
-31/name = "manhole_pipe"
+31/name = "manhole_open"
 31/texture = ExtResource( 26 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
@@ -643,10 +663,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 31/occluder_offset = Vector2( 32, 32 )
 31/navigation_offset = Vector2( 32, 32 )
 31/shape_offset = Vector2( 32, 32 )
-31/shapes = [ SubResource( 38 ) ]
+31/shapes = [ SubResource( 31 ), SubResource( 32 ) ]
 31/one_way_collision_direction = Vector2( 0, 0 )
 31/one_way_collision_max_depth = 0.0
-32/name = "manhole_ceiling_end"
+32/name = "manhole_ladder"
 32/texture = ExtResource( 27 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
@@ -654,10 +674,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 32/occluder_offset = Vector2( 32, 32 )
 32/navigation_offset = Vector2( 32, 32 )
 32/shape_offset = Vector2( 32, 32 )
-32/shapes = [ SubResource( 39 ), SubResource( 40 ) ]
+32/shapes = [ SubResource( 33 ), SubResource( 34 ) ]
 32/one_way_collision_direction = Vector2( 0, 0 )
 32/one_way_collision_max_depth = 0.0
-33/name = "manhole_dungeon_end"
+33/name = "manhole_base"
 33/texture = ExtResource( 28 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
@@ -665,10 +685,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 33/occluder_offset = Vector2( 32, 32 )
 33/navigation_offset = Vector2( 32, 32 )
 33/shape_offset = Vector2( 32, 32 )
-33/shapes = [ SubResource( 45 ), SubResource( 46 ) ]
+33/shapes = [ SubResource( 35 ), SubResource( 36 ) ]
 33/one_way_collision_direction = Vector2( 0, 0 )
 33/one_way_collision_max_depth = 0.0
-34/name = "gate_top_left"
+34/name = "manhole_ceiling"
 34/texture = ExtResource( 29 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
@@ -676,21 +696,21 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 34/occluder_offset = Vector2( 32, 32 )
 34/navigation_offset = Vector2( 32, 32 )
 34/shape_offset = Vector2( 32, 32 )
-34/shapes = [ SubResource( 47 ) ]
+34/shapes = [ SubResource( 37 ) ]
 34/one_way_collision_direction = Vector2( 0, 0 )
 34/one_way_collision_max_depth = 0.0
-35/name = "gate_top_right"
+35/name = "manhole_floor"
 35/texture = ExtResource( 30 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 0, 0, 64, 64 )
-35/occluder_offset = Vector2( 40, 32 )
-35/navigation_offset = Vector2( 40, 32 )
-35/shape_offset = Vector2( 40, 32 )
-35/shapes = [ SubResource( 48 ) ]
+35/occluder_offset = Vector2( 32, 32 )
+35/navigation_offset = Vector2( 32, 32 )
+35/shape_offset = Vector2( 32, 32 )
+35/shapes = [ SubResource( 38 ) ]
 35/one_way_collision_direction = Vector2( 0, 0 )
 35/one_way_collision_max_depth = 0.0
-36/name = "gate_middle_left"
+36/name = "manhole_pipe"
 36/texture = ExtResource( 31 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
@@ -698,10 +718,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 36/occluder_offset = Vector2( 32, 32 )
 36/navigation_offset = Vector2( 32, 32 )
 36/shape_offset = Vector2( 32, 32 )
-36/shapes = [ SubResource( 49 ) ]
+36/shapes = [ SubResource( 38 ) ]
 36/one_way_collision_direction = Vector2( 0, 0 )
 36/one_way_collision_max_depth = 0.0
-37/name = "gate_middle_right"
+37/name = "manhole_ceiling_end"
 37/texture = ExtResource( 32 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
@@ -709,10 +729,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 37/occluder_offset = Vector2( 32, 32 )
 37/navigation_offset = Vector2( 32, 32 )
 37/shape_offset = Vector2( 32, 32 )
-37/shapes = [ SubResource( 50 ) ]
+37/shapes = [ SubResource( 39 ), SubResource( 40 ) ]
 37/one_way_collision_direction = Vector2( 0, 0 )
 37/one_way_collision_max_depth = 0.0
-38/name = "gate_bottom_left"
+38/name = "manhole_dungeon_end"
 38/texture = ExtResource( 33 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
@@ -720,10 +740,10 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 38/occluder_offset = Vector2( 32, 32 )
 38/navigation_offset = Vector2( 32, 32 )
 38/shape_offset = Vector2( 32, 32 )
-38/shapes = [ SubResource( 43 ) ]
+38/shapes = [ SubResource( 41 ), SubResource( 42 ) ]
 38/one_way_collision_direction = Vector2( 0, 0 )
 38/one_way_collision_max_depth = 0.0
-39/name = "gate_bottom_right"
+39/name = "gate_top_left"
 39/texture = ExtResource( 34 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
@@ -731,54 +751,54 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 39/occluder_offset = Vector2( 32, 32 )
 39/navigation_offset = Vector2( 32, 32 )
 39/shape_offset = Vector2( 32, 32 )
-39/shapes = [ SubResource( 43 ) ]
+39/shapes = [ SubResource( 43 ), SubResource( 44 ) ]
 39/one_way_collision_direction = Vector2( 0, 0 )
 39/one_way_collision_max_depth = 0.0
-40/name = "gate_top_left_open"
+40/name = "gate_top_right"
 40/texture = ExtResource( 36 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 0, 0, 64, 64 )
-40/occluder_offset = Vector2( 32, 32 )
-40/navigation_offset = Vector2( 32, 32 )
-40/shape_offset = Vector2( 0, 0 )
-40/shapes = [  ]
+40/occluder_offset = Vector2( 40, 32 )
+40/navigation_offset = Vector2( 40, 32 )
+40/shape_offset = Vector2( 40, 32 )
+40/shapes = [ SubResource( 45 ) ]
 40/one_way_collision_direction = Vector2( 0, 0 )
 40/one_way_collision_max_depth = 0.0
-41/name = "gate_top_right_open"
+41/name = "gate_middle_left"
 41/texture = ExtResource( 37 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
 41/region = Rect2( 0, 0, 64, 64 )
 41/occluder_offset = Vector2( 32, 32 )
 41/navigation_offset = Vector2( 32, 32 )
-41/shape_offset = Vector2( 0, 0 )
-41/shapes = [  ]
+41/shape_offset = Vector2( 32, 32 )
+41/shapes = [ SubResource( 46 ) ]
 41/one_way_collision_direction = Vector2( 0, 0 )
 41/one_way_collision_max_depth = 0.0
-42/name = "gate_middle_left_open"
+42/name = "gate_middle_right"
 42/texture = ExtResource( 38 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
 42/region = Rect2( 0, 0, 64, 64 )
 42/occluder_offset = Vector2( 32, 32 )
 42/navigation_offset = Vector2( 32, 32 )
-42/shape_offset = Vector2( 0, 0 )
-42/shapes = [  ]
+42/shape_offset = Vector2( 32, 32 )
+42/shapes = [ SubResource( 47 ) ]
 42/one_way_collision_direction = Vector2( 0, 0 )
 42/one_way_collision_max_depth = 0.0
-43/name = "gate_middle_right_open"
+43/name = "gate_bottom_left"
 43/texture = ExtResource( 39 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
 43/region = Rect2( 0, 0, 64, 64 )
 43/occluder_offset = Vector2( 32, 32 )
 43/navigation_offset = Vector2( 32, 32 )
-43/shape_offset = Vector2( 0, 0 )
-43/shapes = [  ]
+43/shape_offset = Vector2( 32, 32 )
+43/shapes = [ SubResource( 48 ) ]
 43/one_way_collision_direction = Vector2( 0, 0 )
 43/one_way_collision_max_depth = 0.0
-44/name = "gate_bottom_left_open"
+44/name = "gate_bottom_right"
 44/texture = ExtResource( 40 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
@@ -786,21 +806,21 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 44/occluder_offset = Vector2( 32, 32 )
 44/navigation_offset = Vector2( 32, 32 )
 44/shape_offset = Vector2( 32, 32 )
-44/shapes = [ SubResource( 43 ) ]
+44/shapes = [ SubResource( 48 ) ]
 44/one_way_collision_direction = Vector2( 0, 0 )
 44/one_way_collision_max_depth = 0.0
-45/name = "gate_bottom_right_open"
+45/name = "gate_top_left_open"
 45/texture = ExtResource( 41 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 0, 0, 64, 64 )
 45/occluder_offset = Vector2( 32, 32 )
 45/navigation_offset = Vector2( 32, 32 )
-45/shape_offset = Vector2( 32, 32 )
-45/shapes = [ SubResource( 43 ) ]
+45/shape_offset = Vector2( 0, 0 )
+45/shapes = [  ]
 45/one_way_collision_direction = Vector2( 0, 0 )
 45/one_way_collision_max_depth = 0.0
-46/name = "street_lamp_top_left"
+46/name = "gate_top_right_open"
 46/texture = ExtResource( 42 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
@@ -811,7 +831,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 46/shapes = [  ]
 46/one_way_collision_direction = Vector2( 0, 0 )
 46/one_way_collision_max_depth = 0.0
-47/name = "street_lamp_top_right"
+47/name = "gate_middle_left_open"
 47/texture = ExtResource( 43 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
@@ -822,7 +842,7 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 47/shapes = [  ]
 47/one_way_collision_direction = Vector2( 0, 0 )
 47/one_way_collision_max_depth = 0.0
-48/name = "street_lamp_middle_up"
+48/name = "gate_middle_right_open"
 48/texture = ExtResource( 44 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
@@ -833,18 +853,18 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 48/shapes = [  ]
 48/one_way_collision_direction = Vector2( 0, 0 )
 48/one_way_collision_max_depth = 0.0
-49/name = "street_lamp_middle_down"
+49/name = "gate_bottom_left_open"
 49/texture = ExtResource( 45 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )
 49/region = Rect2( 0, 0, 64, 64 )
 49/occluder_offset = Vector2( 32, 32 )
 49/navigation_offset = Vector2( 32, 32 )
-49/shape_offset = Vector2( 0, 0 )
-49/shapes = [  ]
+49/shape_offset = Vector2( 32, 32 )
+49/shapes = [ SubResource( 48 ) ]
 49/one_way_collision_direction = Vector2( 0, 0 )
 49/one_way_collision_max_depth = 0.0
-50/name = "street_lamp_base"
+50/name = "gate_bottom_right_open"
 50/texture = ExtResource( 47 )
 50/tex_offset = Vector2( 0, 0 )
 50/modulate = Color( 1, 1, 1, 1 )
@@ -852,7 +872,62 @@ points = Vector2Array( -24, 16, -8, 32, -16, 32, -24, 24 )
 50/occluder_offset = Vector2( 32, 32 )
 50/navigation_offset = Vector2( 32, 32 )
 50/shape_offset = Vector2( 32, 32 )
-50/shapes = [ SubResource( 44 ) ]
+50/shapes = [ SubResource( 48 ) ]
 50/one_way_collision_direction = Vector2( 0, 0 )
 50/one_way_collision_max_depth = 0.0
+51/name = "street_lamp_top_left"
+51/texture = ExtResource( 48 )
+51/tex_offset = Vector2( 0, 0 )
+51/modulate = Color( 1, 1, 1, 1 )
+51/region = Rect2( 0, 0, 64, 64 )
+51/occluder_offset = Vector2( 32, 32 )
+51/navigation_offset = Vector2( 32, 32 )
+51/shape_offset = Vector2( 0, 0 )
+51/shapes = [  ]
+51/one_way_collision_direction = Vector2( 0, 0 )
+51/one_way_collision_max_depth = 0.0
+52/name = "street_lamp_top_right"
+52/texture = ExtResource( 49 )
+52/tex_offset = Vector2( 0, 0 )
+52/modulate = Color( 1, 1, 1, 1 )
+52/region = Rect2( 0, 0, 64, 64 )
+52/occluder_offset = Vector2( 32, 32 )
+52/navigation_offset = Vector2( 32, 32 )
+52/shape_offset = Vector2( 0, 0 )
+52/shapes = [  ]
+52/one_way_collision_direction = Vector2( 0, 0 )
+52/one_way_collision_max_depth = 0.0
+53/name = "street_lamp_middle_up"
+53/texture = ExtResource( 50 )
+53/tex_offset = Vector2( 0, 0 )
+53/modulate = Color( 1, 1, 1, 1 )
+53/region = Rect2( 0, 0, 64, 64 )
+53/occluder_offset = Vector2( 32, 32 )
+53/navigation_offset = Vector2( 32, 32 )
+53/shape_offset = Vector2( 0, 0 )
+53/shapes = [  ]
+53/one_way_collision_direction = Vector2( 0, 0 )
+53/one_way_collision_max_depth = 0.0
+54/name = "street_lamp_middle_down"
+54/texture = ExtResource( 51 )
+54/tex_offset = Vector2( 0, 0 )
+54/modulate = Color( 1, 1, 1, 1 )
+54/region = Rect2( 0, 0, 64, 64 )
+54/occluder_offset = Vector2( 32, 32 )
+54/navigation_offset = Vector2( 32, 32 )
+54/shape_offset = Vector2( 0, 0 )
+54/shapes = [  ]
+54/one_way_collision_direction = Vector2( 0, 0 )
+54/one_way_collision_max_depth = 0.0
+55/name = "street_lamp_base"
+55/texture = ExtResource( 52 )
+55/tex_offset = Vector2( 0, 0 )
+55/modulate = Color( 1, 1, 1, 1 )
+55/region = Rect2( 0, 0, 64, 64 )
+55/occluder_offset = Vector2( 32, 32 )
+55/navigation_offset = Vector2( 32, 32 )
+55/shape_offset = Vector2( 32, 32 )
+55/shapes = [ SubResource( 49 ) ]
+55/one_way_collision_direction = Vector2( 0, 0 )
+55/one_way_collision_max_depth = 0.0
 
