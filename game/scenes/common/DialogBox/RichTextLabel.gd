@@ -20,9 +20,7 @@ func _on_Timer_timeout():
 
 func revealText (body, dialog):
 	message=dialog
-	print(message[page])
 	set_bbcode(message[page])
-	print("sono il figlio")
 	timer = get_node("Timer")
 	timer.set_wait_time(.05)
 	timer.start()

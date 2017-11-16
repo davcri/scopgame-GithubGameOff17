@@ -15,6 +15,5 @@ func _ready():
 func _on_DreamLordTrigger_body_enter( body ):
 	textlabel = get_node("RichTextLabel")
 	if body.get_name() == "Player":
-		print ("sono il padre")
 		textlabel.revealText(body, message)
 	pass
