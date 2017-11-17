@@ -94,41 +94,7 @@ func get_puzzle_matrix_state():
 	
 	return matrix
 
-#func _ready():
-#	_initialize_buttons()
-#	update_selector_pos(1, 1)
-
-#func get_selector_texture_button():
-#	return buttons[selector.y][selector.x]
-#
-#func _initialize_buttons():
-#	get_node("TextureButton").set_toggle_mode(true)
-#	get_node("TextureButton").set_ignore_mouse(true)  # Ignores mouse clicks
-#	# get_node("TextureButton").set_opacity(0.5)
-#	
-#	for i in range(ROWS):
-#		var row = []
-#		
-#		for j in range(LOCK_PER_COLUMN):
-#			if i == 0 && j == 0:
-#				row.append(get_node("TextureButton"))
-#			else:
-#				var b = get_node("TextureButton").duplicate()
-#				row.append(b)
-#				add_child(b)
-#		print(row)
-#		buttons.append(row)
-#
-#func activate(i, j):
-#	buttons[j][i].set_pressed(true)
-#	get_selector_texture_button().set_opacity(1)
-#
-#func deactivate(i, j):
-#	buttons[j][i].set_pressed(false)
-#	get_selector_texture_button().set_opacity(0.5)
-#
-#func update_selector_pos(x, y):
-#	deactivate(selector.x, selector.y)
+#func tween_animation_code(x, y):
 #	tween.remove_all()
 #	
 #	# Updates selector coordinates
@@ -144,20 +110,3 @@ func get_puzzle_matrix_state():
 #	tween.interpolate_method(get_selector_texture_button(), "set_opacity", 0, 1, duration, Tween.TRANS_SINE, Tween.EASE_OUT, duration)
 #	tween.set_repeat(true)
 #	tween.start()
-#
-#func _on_CanvasLayer_sequence_lock_started(pos):
-#	activate(pos.x, pos.y) 
-#	update_selector_pos(pos.x, pos.y)
-#	
-#func _on_CanvasLayer_sequence_lock_aborted():
-#	reset_puzzle()
-#	
-#func reset_puzzle():
-#	selector.x = 1
-#	selector.y = 1
-#	
-#	for row in buttons:
-#		for b in row:
-#			b.set_pressed(false)
-
-
