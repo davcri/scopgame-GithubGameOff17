@@ -46,6 +46,9 @@ func check_puzzle_solved():
 		[0, 0, 0]
 	]
 	
+	# Transpose solution matrix
+	_transpose(solution)
+	
 	var matrix = lock.get_puzzle_matrix_state()
 	
 	# print("Matrix:")
@@ -54,10 +57,16 @@ func check_puzzle_solved():
 	
 	if matrix == solution:
 		print("SOLVED")
-		
 		# Should add a bit of delay
 		emit_signal("solved")
-		
 		# Temporary code
 		get_node("Label").set_text("PUZZLE SOLVED")
-		
+
+
+func _transpose(matrix):
+	for x in range(matrix.size()):
+		for y in range(matrix[x].size()):
+			if x < y:
+				var tmp = matrix[x][y]
+				matrix[x][y] = matrix[y][x]
+				matrix[y][x] = tmp
