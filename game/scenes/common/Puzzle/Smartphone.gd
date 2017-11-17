@@ -5,31 +5,59 @@ extends CanvasLayer
 var sequence = []
 onready var lock = get_node("Smartphone/LockNodes")
 
+signal activate_lock
+signal solved
+
+
 func _ready():
 	print("ASD")
 	set_process_input(true)
-	
+
+
 func _input(event):
 	var pos = lock.selector
 	
 	if event.is_action_released("move_left"):
-		print("LEFT")
 		if pos.x > 0:
 			pos.x = pos.x - 1
 			lock.update_selector_pos(pos.x, pos.y)
 	elif event.is_action_released("move_right"):
-		print("RIGHT")
-		if pos.x < lock.NODE_PER_ROW - 1:
+		if pos.x < lock.COLUMNS - 1:
 			pos.x = pos.x + 1
 			lock.update_selector_pos(pos.x, pos.y)
 	elif event.is_action_released("move_up"):
-		print("UP")
 		if pos.y > 0:
 			pos.y = pos.y - 1
 			lock.update_selector_pos(pos.x, pos.y)
 	elif event.is_action_released("move_down"):
-		print("DOWN")
-		if pos.y < lock.NODE_PER_COLUMN - 1:
+		if pos.y < lock.ROWS - 1:
 			pos.y = pos.y + 1
 			lock.update_selector_pos(pos.x, pos.y)
+			
+	if event.is_action_released("action"):
+		emit_signal("activate_lock")
+		check_puzzle_solved()
+
+
+func check_puzzle_solved():
+	var solution = [
+		[0, 1, 0],
+		[0, 0, 0],
+		[0, 0, 0]
+	]
 	
+	var matrix = lock.get_puzzle_matrix_state()
+	
+	# print("Matrix:")
+	# for row in matrix:
+	# 	print(row)
+	
+	if matrix == solution:
+		print("SOLVED")
+		
+		# Should add a bit of delay
+		emit_signal("solved")
+		
+		# Temporary code
+		get_node("Label").set_text("PUZZLE SOLVED")
+		
