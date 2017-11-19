@@ -162,6 +162,9 @@ func disable_input():
 	set_fixed_process(false)
 	# TODO Reset the level
 
+func enable_input():
+	set_fixed_process(true)
+	
 func invert_right_and_left_input(active):
 	print("INPUT INVERTED")
 	
@@ -181,3 +184,6 @@ func _on_AwarenessBar_low_awareness():
 func _on_AwarenessBar_zero_awareness():
 	print("DEAD")
 	disable_input()
+
+func isDead():
+	return get_node("AwarenessBar").get_awareness_value() == 0

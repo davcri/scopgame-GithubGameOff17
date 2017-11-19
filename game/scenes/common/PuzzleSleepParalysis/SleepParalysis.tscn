@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://game/scenes/common/PuzzleSleepParalysis/SleepParalysis.gd" type="Script" id=1]
+[ext_resource path="res://game/scenes/common/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/scenes/common/PuzzleSleepParalysis/CollisionDraw.gd" type="Script" id=3]
+[ext_resource path="res://game/scenes/common/PuzzleSleepParalysis/SleepParalysisTrigger.gd" type="Script" id=4]
+[ext_resource path="res://game/scenes/common/PuzzleSleepParalysis/ProgressBar.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 528, 20 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 96 )
+
+[node name="Node" type="Node2D"]
+
+[node name="SleepParalysis" type="Node" parent="."]
+
+script/script = ExtResource( 1 )
+paralysis_seconds = 4
+awareness_damage = 5
+
+[node name="Timer" type="Timer" parent="SleepParalysis"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 528, 256 )
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 528, 496 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+script/script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+color = Color( 0.1, 0.1, 0.2, 1 )
+
+[node name="SleepParalysisTrigger" type="Area2D" parent="."]
+
+transform/pos = Vector2( 896, 432 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -40 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SleepParalysisTrigger"]
+
+transform/pos = Vector2( 0, -40 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+script/script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+color = Color( 0.71571, 0.258026, 0.742188, 0.251373 )
+
+[node name="ProgressBar" type="ProgressBar" parent="SleepParalysisTrigger"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -32.0
+margin/top = -160.0
+margin/right = 32.0
+margin/bottom = -144.0
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+percent/visible = true
+script/script = ExtResource( 5 )
+
+[connection signal="body_enter" from="SleepParalysisTrigger" to="SleepParalysis" method="_on_SleepParalysisTrigger_body_enter"]
+
+
