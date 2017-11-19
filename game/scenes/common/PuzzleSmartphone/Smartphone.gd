@@ -10,7 +10,6 @@ signal solved
 
 
 func _ready():
-	print("ASD")
 	set_process_input(true)
 
 
@@ -60,8 +59,16 @@ func check_puzzle_solved():
 		# Should add a bit of delay
 		emit_signal("solved")
 		# Temporary code
-		get_node("Label").set_text("PUZZLE SOLVED")
+		
+		get_node("Label").set_text("PUZZLE SOLVED \n" 
+			+ "Input has been disabled \n\n"
+			+ "-> Here the main game will handle the continuation of the game"
+			)
+			
+		disable_input()
 
+func disable_input():
+	set_process_input(false)
 
 func _transpose(matrix):
 	for x in range(matrix.size()):
