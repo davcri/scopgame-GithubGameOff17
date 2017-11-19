@@ -76,4 +76,8 @@ __meta__ = {
 
 [node name="AwarenessBar" parent="." instance=ExtResource( 3 )]
 
+[connection signal="low_awareness" from="AwarenessBar" to="." method="_on_AwarenessBar_low_awareness"]
+
+[connection signal="zero_awareness" from="AwarenessBar" to="." method="_on_AwarenessBar_zero_awareness"]
+
 
