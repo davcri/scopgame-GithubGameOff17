@@ -45,8 +45,11 @@ func _input(event):
 			timer.start()
 			player_node.get_node("AwarenessBar").decrease(awareness_damage)
 			
+			get_node("/root/Node/Words/AnimationPlayer").play("WordsAnimation")
+			
 			if player_node.isDead():
 				timer.stop()
+				get_node("/root/Node/Dead").set_opacity(1)
 
 
 func _on_SleepParalysisTrigger_body_enter(body):
