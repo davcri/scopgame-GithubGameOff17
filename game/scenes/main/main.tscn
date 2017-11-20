@@ -258,7 +258,6 @@ margin/left = 0.0
 margin/top = 120.0
 margin/right = 192.0
 margin/bottom = 160.0
-disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
