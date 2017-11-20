@@ -14,7 +14,7 @@ func _on_SleepParalysisButton_pressed():
 
 
 func _on_ShadersAndLightsButton_pressed():
-	pass # TODO
+	get_tree().change_scene("./game/scenes/common/TestScenes/ShadersAndLights/ShadersAndLights.tscn")
 
 
 func _on_TilePlacingButton_pressed():
