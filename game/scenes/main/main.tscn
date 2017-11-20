@@ -152,7 +152,6 @@ __meta__ = {
 
 [node name="CommonSceneSelector" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 448, 144 )
 
 [node name="CommonScenesLabel" type="Label" parent="CommonSceneSelector"]
@@ -217,7 +216,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 162.0
+margin/right = 192.0
 margin/bottom = 40.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -237,7 +236,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 60.0
-margin/right = 162.0
+margin/right = 192.0
 margin/bottom = 100.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -248,10 +247,55 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="ShadersAndLightsButton" type="Button" parent="CommonSceneSelector/VBoxContainer"]
+
+rect/min_size = Vector2( 0, 40 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 120.0
+margin/right = 192.0
+margin/bottom = 160.0
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Feature - Shaders and Lights"
+flat = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TilePlacingButton" type="Button" parent="CommonSceneSelector/VBoxContainer"]
+
+rect/min_size = Vector2( 0, 40 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 180.0
+margin/right = 192.0
+margin/bottom = 220.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Tile Placing"
+flat = false
+__meta__ = {
+"_edit_lock_": true
+}
+
 [connection signal="pressed" from="LevelSelector/LevelButtonsContainer/Level1Button" to="SceneChanger" method="_on_Level1Button_pressed"]
 
 [connection signal="pressed" from="CommonSceneSelector/VBoxContainer/SmartphoneButton" to="SceneChanger" method="_on_SmartphoneButton_pressed"]
 
 [connection signal="pressed" from="CommonSceneSelector/VBoxContainer/SleepParalysisButton" to="SceneChanger" method="_on_SleepParalysisButton_pressed"]
+
+[connection signal="pressed" from="CommonSceneSelector/VBoxContainer/ShadersAndLightsButton" to="SceneChanger" method="_on_ShadersAndLightsButton_pressed"]
+
+[connection signal="pressed" from="CommonSceneSelector/VBoxContainer/TilePlacingButton" to="SceneChanger" method="_on_TilePlacingButton_pressed"]
 
 
