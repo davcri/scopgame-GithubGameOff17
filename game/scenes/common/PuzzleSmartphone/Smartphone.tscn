@@ -98,9 +98,13 @@ size_flags/vertical = 0
 margin/left = 499.0
 margin/top = 116.0
 margin/right = 853.0
-margin/bottom = 198.0
+margin/bottom = 249.0
 text = "- \"E\" to start the sequence from the selected point
-- \"space\" to restart
+- Solution: 
+
+- X -
+- - -
+- - -
 
 "
 percent_visible = 1.0

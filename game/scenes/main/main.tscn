@@ -2,9 +2,13 @@
 
 [ext_resource path="res://game/scenes/main/scene_changer.gd" type="Script" id=1]
 
-[node name="Node2D" type="Node2D"]
+[node name="DebugRoom" type="Node2D"]
 
-[node name="label" type="Label" parent="."]
+[node name="SceneChanger" type="Node" parent="."]
+
+script/script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
 
 rect/scale = Vector2( 3, 3 )
 focus/ignore_mouse = false
@@ -15,7 +19,7 @@ margin/left = 175.0
 margin/top = -105.0
 margin/right = 398.0
 margin/bottom = 15.0
-text = "Main Scene: Debug Room"
+text = "Debug Room"
 align = 1
 valign = 1
 uppercase = true
@@ -23,16 +27,20 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="scenes" type="Label" parent="."]
+[node name="LevelSelector" type="Node2D" parent="."]
+
+transform/pos = Vector2( 176, 144 )
+
+[node name="LevelScenesLabel" type="Label" parent="LevelSelector"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 86.0
-margin/top = 118.0
-margin/right = 206.0
-margin/bottom = 183.0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 120.0
+margin/bottom = 65.0
 text = "Scenes list:"
 align = 1
 valign = 1
@@ -40,47 +48,168 @@ uppercase = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="SceneChanger" type="Node" parent="."]
+[node name="LevelButtonsContainer" type="VBoxContainer" parent="LevelSelector"]
 
-script/script = ExtResource( 1 )
-
-[node name="ButtonGroup" type="VButtonArray" parent="."]
-
+rect/min_size = Vector2( 100, 100 )
 focus/ignore_mouse = false
-focus/stop_mouse = false
+focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 115.0
-margin/top = 175.0
-margin/right = 194.0
-margin/bottom = 239.0
-flat = false
-button/count = 0
-button/min_button_size = -1.0
-button/align = 112
+margin/left = 20.0
+margin/top = 50.0
+margin/right = 120.0
+margin/bottom = 225.0
+custom_constants/separation = 20
+alignment = 0
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="walk_jump button" type="Button" parent="ButtonGroup"]
+[node name="Level1Button" type="Button" parent="LevelSelector/LevelButtonsContainer"]
 
-rect/min_size = Vector2( 64, 32 )
+rect/min_size = Vector2( 0, 45 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 79.0
-margin/bottom = 32.0
+margin/right = 100.0
+margin/bottom = 45.0
 toggle_mode = false
-click_on_press = true
 enabled_focus_mode = 2
 shortcut = null
-text = "walk_jump"
+text = "Level 1"
 flat = false
 __meta__ = {
 "_edit_lock_": true
 }
 
-[connection signal="released" from="ButtonGroup/walk_jump button" to="SceneChanger" method="_on_walk_jump_button_released"]
+[node name="Level2Button" type="Button" parent="LevelSelector/LevelButtonsContainer"]
+
+rect/min_size = Vector2( 0, 45 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 65.0
+margin/right = 100.0
+margin/bottom = 110.0
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Level 2"
+flat = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Level3Button" type="Button" parent="LevelSelector/LevelButtonsContainer"]
+
+rect/min_size = Vector2( 0, 45 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 130.0
+margin/right = 100.0
+margin/bottom = 175.0
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Level 3"
+flat = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CommonSceneSelector" type="Node2D" parent="."]
+
+transform/pos = Vector2( 448, 144 )
+
+[node name="CommonScenesLabel" type="Label" parent="CommonSceneSelector"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -16.0
+margin/top = 0.0
+margin/right = 176.0
+margin/bottom = 65.0
+text = "Common Scenes"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CommonScenesLabel1" type="Label" parent="CommonSceneSelector"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 144.0
+margin/top = 12.0
+margin/right = 464.0
+margin/bottom = 94.0
+text = "(sub-scenes that can be used in levels)
+
+"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CommonSceneSelector"]
+
+rect/min_size = Vector2( 100, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 32.0
+margin/top = 48.0
+margin/right = 176.0
+margin/bottom = 223.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="SmartphoneButton" type="Button" parent="CommonSceneSelector/VBoxContainer"]
+
+rect/min_size = Vector2( 0, 40 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 144.0
+margin/bottom = 40.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Puzzle - Smartphone"
+flat = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="LevelSelector/LevelButtonsContainer/Level1Button" to="SceneChanger" method="_on_Level1Button_pressed"]
+
+[connection signal="pressed" from="CommonSceneSelector/VBoxContainer/SmartphoneButton" to="SceneChanger" method="_on_SmartphoneButton_pressed"]
 
 
