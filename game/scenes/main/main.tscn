@@ -27,8 +27,27 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="Info" type="Label" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 351.0
+margin/top = 49.0
+margin/right = 672.0
+margin/bottom = 169.0
+text = "(Press \"F1\" to come back to this Debug Room)"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="LevelSelector" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 176, 144 )
 
 [node name="LevelScenesLabel" type="Label" parent="LevelSelector"]
@@ -133,6 +152,7 @@ __meta__ = {
 
 [node name="CommonSceneSelector" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 448, 144 )
 
 [node name="CommonScenesLabel" type="Label" parent="CommonSceneSelector"]
@@ -197,7 +217,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 144.0
+margin/right = 162.0
 margin/bottom = 40.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -208,8 +228,30 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="SleepParalysisButton" type="Button" parent="CommonSceneSelector/VBoxContainer"]
+
+rect/min_size = Vector2( 0, 40 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 60.0
+margin/right = 162.0
+margin/bottom = 100.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Puzzle - Sleep Paralysis"
+flat = false
+__meta__ = {
+"_edit_lock_": true
+}
+
 [connection signal="pressed" from="LevelSelector/LevelButtonsContainer/Level1Button" to="SceneChanger" method="_on_Level1Button_pressed"]
 
 [connection signal="pressed" from="CommonSceneSelector/VBoxContainer/SmartphoneButton" to="SceneChanger" method="_on_SmartphoneButton_pressed"]
+
+[connection signal="pressed" from="CommonSceneSelector/VBoxContainer/SleepParalysisButton" to="SceneChanger" method="_on_SleepParalysisButton_pressed"]
 
 

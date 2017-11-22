@@ -8,16 +8,16 @@ const MAX_VALUE = 100
 signal zero_awareness
 signal low_awareness
 
+onready var bar = get_node("TextureProgress")
 
 func _ready():
 	pass
 
 
 func decrease(amount):
-	var bar = get_node("TextureProgress")
 	bar.set_val(bar.get_val() - amount)
 	
-	var awareness = bar.get_val()
+	var awareness = get_awareness_value()
 	
 	if awareness <= 0:
 		emit_signal("zero_awareness")
@@ -27,3 +27,6 @@ func decrease(amount):
 		pass  # Do nothing at the moment
 	elif awareness <= MAX_VALUE:
 		pass
+		
+func get_awareness_value():
+	return bar.get_val()
