@@ -101,6 +101,21 @@ transform/pos = Vector2( -3, -95 )
 transform/scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 7 )
 
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 564.0
+margin/top = 134.0
+margin/right = 692.0
+margin/bottom = 148.0
+text = "Press \"E\" to interact"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [connection signal="body_enter" from="EventTrigger/Area2D" to="EventTrigger" method="_on_Area2D_body_enter"]
 
 [connection signal="body_exit" from="EventTrigger/Area2D" to="EventTrigger" method="_on_Area2D_body_exit"]
