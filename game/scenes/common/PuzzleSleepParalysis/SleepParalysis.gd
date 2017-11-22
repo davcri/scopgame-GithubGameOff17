@@ -61,4 +61,5 @@ func _on_SleepParalysisTrigger_body_enter(body):
 func _on_timer_timeout():
 	print("SBLOCCA")
 	player_node.enable_input()
+  
 	state = STATES.NORMAL
