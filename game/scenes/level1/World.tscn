@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://game/scenes/level1/World_collectible.gd" type="Script" id=1]
 [ext_resource path="res://game/scenes/level1/assets/tileset/asphalt_tileset.tres" type="TileSet" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://game/scenes/level1/assets/soudtracks/future_city_theme.ogg" type="AudioStream" id=9]
 [ext_resource path="res://game/scenes/level1/StreamPlayer.gd" type="Script" id=10]
 [ext_resource path="res://game/scenes/common/FadeScene/Fade.tscn" type="PackedScene" id=11]
+[ext_resource path="res://game/scenes/common/PuzzleSleepParalysis/SleepParalysis.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -23,6 +24,8 @@ script/script = ExtResource( 1 )
 
 [node name="TileMapBackground" type="TileMap" parent="."]
 
+editor/display_folded = true
+transform/pos = Vector2( -190, -9 )
 mode = 0
 tile_set = ExtResource( 2 )
 cell/size = Vector2( 64, 64 )
@@ -41,6 +44,7 @@ tile_data = IntArray( -130984, 39, -130967, 38, -65455, 21, -65454, 536870932, -
 
 [node name="Collectibles" type="Node2D" parent="TileMapBackground"]
 
+editor/display_folded = true
 transform/pos = Vector2( 891, 38 )
 __meta__ = {
 "_edit_lock_": true
@@ -172,6 +176,10 @@ playback/repeat = false
 playback/speed = 1.0
 
 [node name="FadeInEffect" parent="." instance=ExtResource( 11 )]
+
+[node name="Paralysis" parent="." instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 7167.42, -115.631 )
 
 [connection signal="DreamLordSpeaking" from="TileMapBackground/TriggersDL/DreamLordTrigger" to="Music" method="_on_DreamLordTrigger_DreamLordSpeaking"]
 

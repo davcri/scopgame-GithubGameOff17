@@ -1,8 +1,8 @@
 extends Node
 
 # Configure here the correct paths to nodes
-onready var player_node = get_node("/root/Node/Player")   
-onready var area2D_trigger = get_node("/root/Node/SleepParalysisTrigger")
+onready var player_node = get_node("/root/Level1/Player")   
+onready var area2D_trigger = get_node("/root/Level1/Paralysis/SleepParalysisTrigger")
 
 onready var timer = get_node("Timer")
 
@@ -45,11 +45,11 @@ func _input(event):
 			timer.start()
 			player_node.get_node("AwarenessBar").decrease(awareness_damage)
 			
-			get_node("/root/Node/Words/AnimationPlayer").play("WordsAnimation")
+			get_node("/root/Level1/Paralysis/Words/AnimationPlayer").play("WordsAnimation")
 			
 			if player_node.isDead():
 				timer.stop()
-				get_node("/root/Node/Dead").set_opacity(1)
+				get_node("/root/Level1/Paralysis/Dead").set_opacity(1)
 
 
 func _on_SleepParalysisTrigger_body_enter(body):

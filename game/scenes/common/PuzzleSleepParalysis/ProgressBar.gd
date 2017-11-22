@@ -1,6 +1,6 @@
 extends ProgressBar
 
-onready var timer = get_node("/root/Node/SleepParalysis/Timer")
+onready var timer = get_node("/root/Level1/Paralysis/SleepParalysis/Timer")
 
 func _ready():
 	set_fixed_process(true)
