@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://game/scenes/common/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://game/scenes/common/Player/Arthur_Dent.png" type="Texture" id=2]
 [ext_resource path="res://game/scenes/common/AwarenessBar/AwarenessBar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game/scenes/common/assets/warning_normal.png" type="Texture" id=4]
+[ext_resource path="res://EventIcon.gd" type="Script" id=5]
+[ext_resource path="res://game/scenes/common/assets/event.smp" type="Sample" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,6 +25,15 @@ func _ready():
 	# Initialization here
 	pass
 "
+
+[sub_resource type="SampleLibrary" id=3]
+
+samples/event_available = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 6 )
+}
 
 [node name="Player" type="KinematicBody2D"]
 
@@ -63,8 +75,8 @@ limit/right = 10000000
 limit/bottom = 10000000
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
-smoothing/enable = false
-smoothing/speed = 5.0
+smoothing/enable = true
+smoothing/speed = 2.0
 drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
@@ -75,6 +87,25 @@ __meta__ = {
 }
 
 [node name="AwarenessBar" parent="." instance=ExtResource( 3 )]
+
+[node name="EventIcon" type="Sprite" parent="."]
+
+visibility/opacity = 0.2
+transform/pos = Vector2( 0, -60 )
+transform/scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+script/script = ExtResource( 5 )
+
+[node name="SamplePlayer2D" type="SamplePlayer2D" parent="."]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 1
+config/samples = SubResource( 3 )
+config/pitch_random = 0.0
 
 [connection signal="low_awareness" from="AwarenessBar" to="." method="_on_AwarenessBar_low_awareness"]
 

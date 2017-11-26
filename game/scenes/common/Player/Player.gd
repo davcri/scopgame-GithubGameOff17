@@ -197,3 +197,16 @@ func _on_AwarenessBar_zero_awareness():
 
 func isDead():
 	return get_node("AwarenessBar").get_awareness_value() == 0
+
+
+func _on_action_event_available():
+	get_node("EventIcon").set_opacity(1)
+	get_node("SamplePlayer2D").play("event_available")
+
+func _on_Smartphone_action_event_no_longer_available():
+	get_node("EventIcon").set_opacity(0)
+
+func _on_Smartphone_puzzle_started():
+	disable_input()
+	get_node("../FadeInEffect").dim()
+	
