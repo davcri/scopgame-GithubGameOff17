@@ -35,9 +35,13 @@ const MAX_FALL_SPEED = 1400
 var jump_count = 0
 var jump_pos = Vector2()  # posizione al momento del salto
 
+var can_jump = false # FIX
+# questa ci salva il culo dal bug, settandola continuamente a false in 
+# process e a true solo se c'è collisione, ergo se non siamo per l'aria
+
 # rendendola una var anziché const si potrebbe, più avanti nel gioco, con
 # qualche upgrade potenziarla, in questo caso non ci interessa
-const MAX_JUMP_COUNT = 1
+#const MAX_JUMP_COUNT = 1
 
 func _ready():
 	set_fixed_process(true)
@@ -54,14 +58,14 @@ func _input(event):
 	if input_inverted:
 		jump_action = "move_down"
 		
-	
-	if jump_count < MAX_JUMP_COUNT and event.is_action_pressed(jump_action) && floor(speed.y) == 0:
+	if event.is_action_pressed(jump_action) && can_jump: #jump_count < MAX_JUMP_COUNT
 		speed.y = - JUMP_FORCE
-		jump_count += 1
+		#jump_count += 1
 		jump_pos = get_pos()  # FIX
 
 
 func _fixed_process(delta):
+	can_jump = false
 	input_direction = get_input_direction()
 
 	# MOVEMENT
@@ -101,6 +105,8 @@ func _fixed_process(delta):
 	var movement_reminder = move(velocity)
 
 	if is_colliding():
+		#print("porchiddio")
+		can_jump = true
 		# calcoliamo il vettore normale della collisione e ricordandoci della nostra
 		# ultima direzione con slide costruiamo un movimento che escluda la collisione
 		var normal = get_collision_normal()
@@ -115,8 +121,8 @@ func _fixed_process(delta):
 		# dobbiamo ripristinare a 0 il jump_count ogni volta che il pg tocca terra
 		# se non mettessimo la clausola if, saltando sui muri salterebbe all'infinito
 		# se il vettore normale // asse y (0, +-1) allora si tratta del ground
-		if normal == Vector2(0 , -1):
-			jump_count = 0
+		#if normal == Vector2(0 , -1):
+		#	jump_count = 0
 	
 	if is_falled():
 		set_pos(jump_pos)
