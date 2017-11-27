@@ -21,6 +21,7 @@ const ACCELERATION = 2600  # 2600 pixel per secondo al secondo
 const DECELERATION = 5000
 
 const FALL_DAMAGE = 25  # damage taken when falling into the void
+const JUMP_SLOPE_TRESHOLD = 0.79  # radians
 
 # jf "quanto in alto salta" forza opposta alla forza di gravità; nella maggior
 # parte degli engine l'asse y è negativo in alto e positivo in basso
@@ -49,7 +50,6 @@ func _ready():
 	# va inserito il path, essendo child diretto basta "Sprite"
 	sprite_node = get_node("Sprite")
 	jump_pos = get_pos()
-	print("PLAYUER")
 
 
 func _input(event):
@@ -103,13 +103,17 @@ func _fixed_process(delta):
 	# camminare, a tal scopo è utile ricordare il vettore velocità precedente alla
 	# collisione:
 	var movement_reminder = move(velocity)
-
+	
 	if is_colliding():
-		#print("porchiddio")
-		can_jump = true
 		# calcoliamo il vettore normale della collisione e ricordandoci della nostra
 		# ultima direzione con slide costruiamo un movimento che escluda la collisione
 		var normal = get_collision_normal()
+		var slope_angle = normal.angle_to(Vector2(0, -1))  # in radiants
+		
+		print(abs(slope_angle))
+		if abs(slope_angle) < JUMP_SLOPE_TRESHOLD:
+			can_jump = true
+			
 		var final_movement = normal.slide(movement_reminder)
 		# ovviamente non possiamo ignorarla totalmente, essendoci stata una collisione
 		# dobbiamo resettare la speed lungo l'asse y che altrimenti si accumula
