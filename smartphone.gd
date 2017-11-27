@@ -1,7 +1,7 @@
 extends Node2D
 
 const smartphone_scene_path = "res://game/scenes/common/PuzzleSmartphone/Smartphone.tscn"
-const fade_node_path = "/root/Level1/FadeInEffect"
+const fade_node_path = "/root/Level1/GraphicEffects/FadeInEffect"
 const player_node_path = "/root/Level1/Player"
 
 
