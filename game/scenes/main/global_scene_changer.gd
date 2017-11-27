@@ -8,7 +8,6 @@ var current_scene = null
 var root
 
 func _ready():
-	print("CALLED")
 	root = get_tree().get_root()
 	set_process_input(true)
 

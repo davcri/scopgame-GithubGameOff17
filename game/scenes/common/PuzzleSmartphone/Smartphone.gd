@@ -60,9 +60,10 @@ func check_puzzle_solved():
 		emit_signal("solved")
 		# Temporary code
 		
-		get_node("Label").set_text("PUZZLE SOLVED \n" 
-			+ "Input has been disabled \n\n"
-			+ "-> Here the main game will handle the continuation of the game"
+		get_node("PlayerInstructions").set_text("PUZZLE SOLVED \n" 
+			+ "Are you satisfied now ? \n"
+			+ "Go back to your life... \n\n" + 
+			"Speak with the Dream Lord"
 			)
 			
 		disable_input()
