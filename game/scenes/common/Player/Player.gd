@@ -16,9 +16,9 @@ var direction = 1
 var speed = Vector2()  # es: 200 pixel per secondo (indipendente dalla direzione)
 var velocity = Vector2()  # velocity è un VETTORE, dipende dalla velocità, dalla direzione e dal delta (tempo)
 
-const MAX_SPEED = 442
-const ACCELERATION = 2600  # 2600 pixel per secondo al secondo
-const DECELERATION = 5000
+const MAX_SPEED = 200
+const ACCELERATION = 2000  # 2600 pixel per secondo al secondo
+const DECELERATION = 1000
 
 const FALL_DAMAGE = 25  # damage taken when falling into the void
 const JUMP_SLOPE_TRESHOLD = 0.79  # radians
