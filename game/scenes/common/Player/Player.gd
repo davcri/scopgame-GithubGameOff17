@@ -16,7 +16,7 @@ var direction = 1
 var speed = Vector2()  # es: 200 pixel per secondo (indipendente dalla direzione)
 var velocity = Vector2()  # velocity è un VETTORE, dipende dalla velocità, dalla direzione e dal delta (tempo)
 
-const MAX_SPEED = 200
+const MAX_SPEED = 300*2
 const ACCELERATION = 2000  # 2600 pixel per secondo al secondo
 const DECELERATION = 1000
 
@@ -29,7 +29,7 @@ const JUMP_SLOPE_TRESHOLD = 0.79  # radians
 # func input è MENO JUMP_FORCE (l'asse x rimane invariato)
 const JUMP_FORCE = 800
 const GRAVITY = 2000
-const MAX_FALL_SPEED = 1400
+const MAX_FALL_SPEED = 1200
 
 # limiteremo a 1 il numero di salti che può compiere il giocatore prima di
 # ritoccare terra (già 2 sarebbero esagerati nel nostro caso)
@@ -110,7 +110,6 @@ func _fixed_process(delta):
 		var normal = get_collision_normal()
 		var slope_angle = normal.angle_to(Vector2(0, -1))  # in radiants
 		
-		print(abs(slope_angle))
 		if abs(slope_angle) < JUMP_SLOPE_TRESHOLD:
 			can_jump = true
 			
@@ -198,14 +197,12 @@ func _on_AwarenessBar_zero_awareness():
 func isDead():
 	return get_node("AwarenessBar").get_awareness_value() == 0
 
-func _on_action_event_available():
+func _on_Smartphone_puzzle_started():
+	disable_input()
+
+func _on_Area2D_action_event_available():
 	get_node("EventIcon").set_opacity(1)
 	get_node("SamplePlayer2D").play("event_available")
 
-func _on_Smartphone_action_event_no_longer_available():
+func _on_Area2D_action_event_no_longer_available():
 	get_node("EventIcon").set_opacity(0)
-
-func _on_Smartphone_puzzle_started():
-	disable_input()
-	
-	

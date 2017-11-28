@@ -7,9 +7,8 @@ const player_node_path = "/root/Level1/Player"
 
 func _ready():
 	set_process_input(true)
-	
-signal action_event_available
-signal action_event_no_longer_available
+
+
 signal puzzle_started
 signal puzzle_completed
 signal puzzle_quit
@@ -47,14 +46,6 @@ func quit_puzzle():
 		get_node(player_node_path).enable_input()
 	else:
 		print("smartphone scene null")
-
-func _on_Area2D_body_enter(body):
-	if body.get_name() == "Player":
-		emit_signal("action_event_available")
-
-func _on_Area2D_body_exit(body):
-	if body.get_name() == "Player":
-		emit_signal("action_event_no_longer_available")
 
 func _load_smartphone_scene():
 	var smartphonescene = load(smartphone_scene_path)
