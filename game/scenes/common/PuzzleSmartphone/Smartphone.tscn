@@ -2,11 +2,13 @@
 
 [ext_resource path="res://game/scenes/common/PuzzleSmartphone/Smartphone.gd" type="Script" id=1]
 [ext_resource path="res://game/scenes/common/PuzzleSmartphone/smarphone.png" type="Texture" id=2]
-[ext_resource path="res://Lock.gd" type="Script" id=3]
+[ext_resource path="res://game/scenes/common/PuzzleSmartphone/Lock.gd" type="Script" id=3]
 [ext_resource path="res://game/scenes/common/PuzzleSmartphone/phone-lock-little.tex" type="Texture" id=4]
 [ext_resource path="res://game/scenes/common/PuzzleSmartphone/node-selected.tex" type="Texture" id=5]
 [ext_resource path="res://game/scenes/common/PuzzleSmartphone/selector.tex" type="Texture" id=6]
-[ext_resource path="res://Selector.gd" type="Script" id=7]
+[ext_resource path="res://game/scenes/common/PuzzleSmartphone/Selector.gd" type="Script" id=7]
+
+
 
 [node name="CanvasLayer" type="CanvasLayer"]
 

@@ -13,3 +13,6 @@ func toggle():
 	elif get_frame() == 1:  # Frame 1 = gate open
 		get_node("StaticBody2D/CollisionShape2D").set_trigger(false)  # Enable collisions
 		set_frame(0)
+
+func _on_Switch_toggled():
+	toggle()

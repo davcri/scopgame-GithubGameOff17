@@ -200,9 +200,9 @@ func isDead():
 func _on_Smartphone_puzzle_started():
 	disable_input()
 
-func _on_Area2D_action_event_available():
+func set_event_available():
 	get_node("EventIcon").set_opacity(1)
 	get_node("SamplePlayer2D").play("event_available")
 
-func _on_Area2D_action_event_no_longer_available():
+func set_event_no_longer_available():
 	get_node("EventIcon").set_opacity(0)

@@ -1,15 +1,27 @@
 extends Area2D
 
-signal action_event_available
-signal action_event_no_longer_available
+onready var player = get_node("/root/Level1/Player")
+
+signal toggled
+
 
 func _ready():
-	pass
+	connect("body_enter", self, "_on_Area2D_body_enter")
+	connect("body_exit", self, "_on_Area2D_body_exit")
+	set_process_input(true)
+
+func  _input(event):
+	if event.is_action_released("action"):
+		var bodies = get_overlapping_bodies()
+		for b in bodies:
+			if b.get_name() == "Player":
+				# Change sprite
+				get_parent().toggle()
 
 func _on_Area2D_body_enter(body):
 	if body.get_name() == "Player":
-		emit_signal("action_event_available")
+		player.set_event_available()
 
 func _on_Area2D_body_exit(body):
 	if body.get_name() == "Player":
-		emit_signal("action_event_no_longer_available")
+		player.set_event_no_longer_available()
